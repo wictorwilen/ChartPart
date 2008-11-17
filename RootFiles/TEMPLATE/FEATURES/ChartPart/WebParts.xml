@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created by STSDEV at 2008-11-04 10:42:34-->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="ChartPart" List="113" Url="_catalogs/wp" Path="WebParts" RootWebOnly="True">
+    <File Url="ChartPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="ChartPart" />
+    </File>  
+  </Module>
+</Elements>

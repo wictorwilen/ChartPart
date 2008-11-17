@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created by STSDEV at 2008-11-04 10:42:34-->
+<Solution>
+  <SolutionId>74D87849-D95C-48ED-A8DB-78A567E0AD3B</SolutionId>
+  <SolutionName>ChartPart</SolutionName>
+  <Features>
+    <Feature Primary="True">feature.xml</Feature>
+  </Features>
+  <ResetWebServer>True</ResetWebServer>
+  <AssemblyDeployment>True</AssemblyDeployment>
+  <SafeControlSettings>True</SafeControlSettings>
+  <CasPermissions>False</CasPermissions>
+  <!--Assembly files-->
+  <Assemblies>
+    <Assembly Location="ChartPart.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="ChartPart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b674fbef227b83bb" Namespace="ChartPart" TypeName="*" Safe="True" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+</Solution>
