@@ -9,3 +9,5 @@ using System.Reflection;
 
 
 
+[assembly: AssemblyTitleAttribute("ChartPart for SharePoint")]
+[assembly: AssemblyCompanyAttribute("Wictor Wilén")]

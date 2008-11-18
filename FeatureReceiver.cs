@@ -1,3 +1,16 @@
+/*
+ * 
+ * ChartPart for SharePoint
+ * ------------------------------------------
+ * Copyright (c) 2008, Wictor Wilén
+ * http://www.codeplex.com/ChartPart/
+ * http://www.wictorwilen.se/
+ * ------------------------------------------
+ * Licensed under the Microsoft Public License (Ms-PL) 
+ * http://www.opensource.org/licenses/ms-pl.html
+ * 
+ */
+
 using System;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Administration;
@@ -63,6 +76,16 @@ namespace ChartPart {
 
         private static void AddorRemoveChartSettingsToWebConfig(SPWebApplication webApplication, bool removeModification) {
 
+
+            // this is to make sure that we have the appSettings, not there by default in WSS 3.0
+            // and I don't care removing it afterwards
+            SPWebConfigModification appSettingsMod = new SPWebConfigModification("appSettings", "configuration");
+            appSettingsMod.Type = SPWebConfigModification.SPWebConfigModificationType.EnsureSection;
+            appSettingsMod.Owner = "ChartPart";
+            appSettingsMod.Sequence = 0;
+            webApplication.WebConfigModifications.Add(appSettingsMod);
+            
+
             string keyValue = string.Format(CultureInfo.InvariantCulture,
                 "storage={0};timeout={1};",
                 new object[] { "memory", "20" });
@@ -72,7 +95,7 @@ namespace ChartPart {
                 "configuration/appSettings");
 
             modification.Owner = "ChartPart";
-            modification.Sequence = 0;
+            modification.Sequence = 1;
             modification.Type = SPWebConfigModification.SPWebConfigModificationType.EnsureChildNode;
 
             modification.Value = string.Format(
@@ -84,6 +107,7 @@ namespace ChartPart {
                 webApplication.WebConfigModifications.Remove(modification);
             }
             else {
+                
                 webApplication.WebConfigModifications.Add(modification);
             }
             

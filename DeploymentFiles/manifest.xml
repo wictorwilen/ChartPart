@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Manifest created STSDEV utility at 2008-11-17 23:25:18-->
+<!--Manifest created STSDEV utility at 2008-11-18 20:54:41-->
 <Solution SolutionId="74D87849-D95C-48ED-A8DB-78A567E0AD3B" ResetWebServer="True" xmlns="http://schemas.microsoft.com/sharepoint/">
   <!--Feature Manifest files-->
   <FeatureManifests>
@@ -7,6 +7,7 @@
   </FeatureManifests>
   <!--TEMPLATE files-->
   <TemplateFiles>
+    <TemplateFile Location="IMAGES\ChartPart\oscillator_16.gif" />
     <TemplateFile Location="IMAGES\ChartPart\oscillator_32.gif" />
   </TemplateFiles>
   <!--Assembly files-->

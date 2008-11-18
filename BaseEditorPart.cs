@@ -1,12 +1,36 @@
-﻿using System;
+﻿/*
+ * 
+ * ChartPart for SharePoint
+ * ------------------------------------------
+ * Copyright (c) 2008, Wictor Wilén
+ * http://www.codeplex.com/ChartPart/
+ * http://www.wictorwilen.se/
+ * ------------------------------------------
+ * Licensed under the Microsoft Public License (Ms-PL) 
+ * http://www.opensource.org/licenses/ms-pl.html
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.WebControls;
 using System.Web.UI;
 
+
 namespace ChartPart {
+    /// <summary>
+    /// Abstract helper class for creating EditorParts
+    /// </summary>
     public abstract class BaseEditorPart: EditorPart {
+
+        /// <summary>
+        /// Name of the editor, required
+        /// </summary>
+        public abstract string EditorName {
+            get;
+        }
 
         /// <summary>
         /// The main table used in the editor part
@@ -45,6 +69,19 @@ namespace ChartPart {
             this.ChildControlsCreated = true;
         }
 
+        protected void AddToolPaneRow(TableRow row) {
+            if (this.EditorTable == null) {
+                CreateToolPaneTable();
+            }
+            this.EditorTable.Rows.Add(row);
+        }
+        protected void CreateToolPaneTable() {
+            this.EditorTable = new Table();
+            this.EditorTable.CellPadding = 0;
+            this.EditorTable.CellSpacing = 0;
+            this.EditorTable.Style["border-collapse"] = "collapse";
+            this.EditorTable.Attributes.Add("width", "100%");
+        }
 
         protected TextBox CreateEditorPartTextBox() {
             TextBox textBox = new TextBox();

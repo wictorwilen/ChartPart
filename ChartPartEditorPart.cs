@@ -1,4 +1,17 @@
-﻿using System;
+﻿/*
+ * 
+ * ChartPart for SharePoint
+ * ------------------------------------------
+ * Copyright (c) 2008, Wictor Wilén
+ * http://www.codeplex.com/ChartPart/
+ * http://www.wictorwilen.se/
+ * ------------------------------------------
+ * Licensed under the Microsoft Public License (Ms-PL) 
+ * http://www.opensource.org/licenses/ms-pl.html
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.SharePoint.WebPartPages;
@@ -15,7 +28,7 @@ namespace ChartPart {
     public class ChartPartEditorPart : BaseEditorPart {
 
         public ChartPartEditorPart() {
-            this.Title = "ChartPart Settings";
+            this.Title = Properties.Resources.ChartPartSettings;
 
         }
 
@@ -28,13 +41,12 @@ namespace ChartPart {
         CheckBoxList m_xcols;
         DropDownList m_ycols;
 
+        public override string EditorName {
+            get { return "_ChartPartEditorPart"; }
+        }
 
         protected override Control FillEditorPanel() {
-            this.EditorTable = new Table();
-            this.EditorTable.CellPadding = 0;
-            this.EditorTable.CellSpacing = 0;
-            this.EditorTable.Style["border-collapse"] = "collapse";
-            this.EditorTable.Attributes.Add("width", "100%");
+            CreateToolPaneTable();
 
             // add the rows
 
@@ -43,14 +55,14 @@ namespace ChartPart {
             m_siteUrl.AutoPostBack = true;
             m_list = new DropDownList();
             m_view = new DropDownList();
-            m_list.Items.Add(new ListItem("-- Select --", Guid.Empty.ToString()));
+            m_list.Items.Add(new ListItem(Properties.Resources.DropDownSelect, Guid.Empty.ToString()));
             m_list.SelectedIndexChanged += new EventHandler(m_list_SelectedIndexChanged);
             m_list.AutoPostBack = true;
-            m_view.Items.Add(new ListItem("-- Select --", Guid.Empty.ToString()));
+            m_view.Items.Add(new ListItem(Properties.Resources.DropDownSelect, Guid.Empty.ToString()));
             m_view.SelectedIndexChanged += new EventHandler(m_view_SelectedIndexChanged);
             m_view.AutoPostBack = true;
             m_xcols = new CheckBoxList();
-            m_ycols = new DropDownList();
+            m_ycols = new DropDownList(); 
             m_chartType = new DropDownList();
             m_chartType.Items.Add(SeriesChartType.Point.ToString());
             m_chartType.Items.Add(SeriesChartType.Line.ToString());
@@ -68,16 +80,16 @@ namespace ChartPart {
 
 
             m_title = CreateEditorPartTextBox();
-            this.EditorTable.Rows.Add(CreateToolPaneRow("Title", new Control[] { m_title }));
-            this.EditorTable.Rows.Add(CreateToolPaneRow("Site", new Control[] { m_siteUrl }));
-            this.EditorTable.Rows.Add(CreateToolPaneRow("List", new Control[] { m_list }));
-            this.EditorTable.Rows.Add(CreateToolPaneRow("View", new Control[] { m_view }));
-            this.EditorTable.Rows.Add(CreateToolPaneSeparator());
-            this.EditorTable.Rows.Add(CreateToolPaneRow("X-Series column(s)", new Control[] { m_xcols }));
-            this.EditorTable.Rows.Add(CreateToolPaneSeparator());
-            this.EditorTable.Rows.Add(CreateToolPaneRow("Y-Series column", new Control[] { m_ycols }));
-            this.EditorTable.Rows.Add(CreateToolPaneSeparator());
-            this.EditorTable.Rows.Add(CreateToolPaneRow("Chart Type", new Control[] { m_chartType }));
+            AddToolPaneRow(CreateToolPaneRow(Properties.Resources.Title, new Control[] { m_title }));
+            AddToolPaneRow(CreateToolPaneRow(Properties.Resources.Site, new Control[] { m_siteUrl }));
+            AddToolPaneRow(CreateToolPaneRow(Properties.Resources.List, new Control[] { m_list }));
+            AddToolPaneRow(CreateToolPaneRow(Properties.Resources.View, new Control[] { m_view }));
+            AddToolPaneRow(CreateToolPaneSeparator());
+            AddToolPaneRow(CreateToolPaneRow("X-Series column(s)", new Control[] { m_xcols }));
+            AddToolPaneRow(CreateToolPaneSeparator());
+            AddToolPaneRow(CreateToolPaneRow("Y-Series column", new Control[] { m_ycols }));
+            AddToolPaneRow(CreateToolPaneSeparator());
+            AddToolPaneRow(CreateToolPaneRow("Chart Type", new Control[] { m_chartType }));
 
 
 
@@ -230,7 +242,7 @@ namespace ChartPart {
 
         private void fillLists(SPWeb web) {
             m_list.Items.Clear();
-            m_list.Items.Add(new ListItem("-- Select --", Guid.Empty.ToString()));
+            m_list.Items.Add(new ListItem(Properties.Resources.DropDownSelect, Guid.Empty.ToString()));
             foreach (SPList list in web.Lists) {
                 m_list.Items.Add(new ListItem(list.Title, list.ID.ToString()));
             }
@@ -238,7 +250,7 @@ namespace ChartPart {
 
         private void fillViews(SPList sellist) {
             m_view.Items.Clear();
-            m_view.Items.Add(new ListItem("-- Select --", Guid.Empty.ToString()));
+            m_view.Items.Add(new ListItem(Properties.Resources.DropDownSelect, Guid.Empty.ToString()));
             foreach (SPView view in sellist.Views) {
                 m_view.Items.Add(new ListItem(view.Title, view.ID.ToString()));
             }
@@ -247,6 +259,7 @@ namespace ChartPart {
         private void fillColumns(SPList sellist, SPView selview) {
             m_xcols.Items.Clear();
             m_ycols.Items.Clear();
+
             foreach (SPField field in sellist.Fields) {
                 if (selview.ViewFields.Exists(field.InternalName)) {
                     if (isNumericField(field)) {
@@ -255,6 +268,7 @@ namespace ChartPart {
                     m_ycols.Items.Add(new ListItem(field.Title, field.InternalName));
                 }
             }
+            m_xcols.Items.Add(new ListItem("(Item count)", "**count**"));
         }
 
         private bool isNumericField(SPField field) {

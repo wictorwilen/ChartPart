@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Created by STSDEV at 2008-11-04 10:42:34-->
+<!--
+ChartPart for SharePoint
+Copyright (c) 2008, Wictor Wilén
+http://www.codeplex.com/ChartPart/
+http://www.wictorwilen.se/
+Licensed under the Microsoft Public License (Ms-PL)
+http://www.opensource.org/licenses/ms-pl.html
+-->
 <webParts>
   <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
     <metaData>
@@ -14,6 +21,8 @@
         <property name="AllowZoneChange" type="bool">True</property>
         <property name="AllowHide" type="bool">True</property>
         <property name="ExportMode" type="exportmode">All</property>
+        <property name="TitleIconImageUrl" type="string">/_layouts/images/ChartPart/oscillator_16.gif</property>
+        <property name="CatalogIconImageUrl" type="string">/_layouts/images/ChartPart/oscillator_16.gif</property>
       </properties>
     </data>
   </webPart>
