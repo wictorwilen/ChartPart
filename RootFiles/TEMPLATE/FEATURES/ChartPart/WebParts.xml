@@ -10,7 +10,7 @@ http://www.opensource.org/licenses/ms-pl.html
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="ChartPart" List="113" Url="_catalogs/wp" Path="WebParts" RootWebOnly="True">
     <File Url="ChartPart.webpart" Type="GhostableInLibrary">
-      <Property Name="Group" Value="ChartPart" />
+      <Property Name="Group" Value="ChartParts" />
     </File>  
   </Module>
 </Elements>

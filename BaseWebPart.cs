@@ -53,7 +53,7 @@ namespace ChartPart {
             HyperLink hl = new HyperLink();
             hl.NavigateUrl = string.Format("javascript:MSOTlPn_ShowToolPane2Wrapper('Edit','129','{0}');", this.ID);
             hl.ID = string.Format("MsoFrameworkToolpartDefmsg_{0}", this.ID);
-            hl.Text = "Click here to open the Tool Pane...";
+            hl.Text = Properties.Resources.OpenToolPane;
             label.Controls.Add(new LiteralControl("<br/>"));
             label.Controls.Add(hl);
             return label;

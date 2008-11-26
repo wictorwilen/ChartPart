@@ -1,7 +1,16 @@
-//*** Demoware created by Ted Pattison Group ***
-//**********************************************
-//*** Learn more about SharePoint development
-//*** visit us at http://www.TedPattison.net
+/*
+ * 
+ * ChartPart for SharePoint
+ * ------------------------------------------
+ * Copyright (c) 2008, Wictor Wilén
+ * http://www.codeplex.com/ChartPart/
+ * http://www.wictorwilen.se/
+ * ------------------------------------------
+ * Licensed under the Microsoft Public License (Ms-PL) 
+ * http://www.opensource.org/licenses/ms-pl.html
+ * 
+ */
+
 
 using System.Reflection;
 

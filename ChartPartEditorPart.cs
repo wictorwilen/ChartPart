@@ -45,7 +45,7 @@ namespace ChartPart {
             get { return "_ChartPartEditorPart"; }
         }
 
-        protected override Control FillEditorPanel() {
+        protected override void FillEditorPanel() {
             CreateToolPaneTable();
 
             // add the rows
@@ -80,20 +80,20 @@ namespace ChartPart {
 
 
             m_title = CreateEditorPartTextBox();
-            AddToolPaneRow(CreateToolPaneRow(Properties.Resources.Title, new Control[] { m_title }));
-            AddToolPaneRow(CreateToolPaneRow(Properties.Resources.Site, new Control[] { m_siteUrl }));
+            AddToolPaneRowWithBuilder(CreateToolPaneRow(Properties.Resources.Title, new Control[] { m_title }), m_title);
+            AddToolPaneRowWithBuilder(CreateToolPaneRow(Properties.Resources.Site, new Control[]{m_siteUrl}), m_siteUrl);
             AddToolPaneRow(CreateToolPaneRow(Properties.Resources.List, new Control[] { m_list }));
             AddToolPaneRow(CreateToolPaneRow(Properties.Resources.View, new Control[] { m_view }));
             AddToolPaneRow(CreateToolPaneSeparator());
-            AddToolPaneRow(CreateToolPaneRow("X-Series column(s)", new Control[] { m_xcols }));
+            AddToolPaneRow(CreateToolPaneRow(Properties.Resources.XSeries, new Control[] { m_xcols }));
             AddToolPaneRow(CreateToolPaneSeparator());
-            AddToolPaneRow(CreateToolPaneRow("Y-Series column", new Control[] { m_ycols }));
+            AddToolPaneRow(CreateToolPaneRow(Properties.Resources.YSeries, new Control[] { m_ycols }));
             AddToolPaneRow(CreateToolPaneSeparator());
-            AddToolPaneRow(CreateToolPaneRow("Chart Type", new Control[] { m_chartType }));
+            AddToolPaneRow(CreateToolPaneRow(Properties.Resources.ChartType, new Control[] { m_chartType }));
 
 
 
-            return this.EditorTable;
+            
         }
 
 
@@ -104,7 +104,7 @@ namespace ChartPart {
             m_ycols.Items.Clear();
             if (!string.IsNullOrEmpty(m_siteUrl.Text)) {
                 using (SPSite site = new SPSite(m_siteUrl.Text)) {
-                    using (SPWeb web = site.OpenWeb(m_siteUrl.Text.Substring(site.Url.Length))) {
+                    using (SPWeb web = site.OpenWeb()) {
                         fillLists(web);
                     }
                 }
@@ -116,7 +116,7 @@ namespace ChartPart {
             m_ycols.Items.Clear();
             if (!string.IsNullOrEmpty(m_siteUrl.Text)) {
                 using (SPSite site = new SPSite(m_siteUrl.Text)) {
-                    using (SPWeb web = site.OpenWeb(m_siteUrl.Text.Substring(site.Url.Length))) {
+                    using (SPWeb web = site.OpenWeb()) {
                         SPList sellist = web.Lists[new Guid(m_list.SelectedValue)];
                         if (sellist != null) {
                             try {
@@ -139,7 +139,7 @@ namespace ChartPart {
             m_ycols.Items.Clear();
             if (!string.IsNullOrEmpty(m_siteUrl.Text)) {
                 using (SPSite site = new SPSite(m_siteUrl.Text)) {
-                    using (SPWeb web = site.OpenWeb(m_siteUrl.Text.Substring(site.Url.Length))) {
+                    using (SPWeb web = site.OpenWeb()) {
                         SPList sellist = web.Lists[new Guid(m_list.SelectedValue)];
                         if (sellist != null) {
                             fillViews(sellist);
@@ -198,7 +198,7 @@ namespace ChartPart {
                 m_chartType.SelectedValue = chartPart.ChartType.ToString();
                 
                 using (SPSite site = new SPSite(chartPart.SiteUrl)) {
-                    using (SPWeb web = site.OpenWeb(chartPart.SiteUrl.Substring(site.Url.Length))) {
+                    using (SPWeb web = site.OpenWeb()) {
                         fillLists(web);
                         m_list.SelectedValue = chartPart.ListId.ToString();
                         if (chartPart.ListId != Guid.Empty) {
@@ -262,13 +262,13 @@ namespace ChartPart {
 
             foreach (SPField field in sellist.Fields) {
                 if (selview.ViewFields.Exists(field.InternalName)) {
-                    if (isNumericField(field)) {
+                    if (isNumericField(field) || field.Type == SPFieldType.Calculated) {
                         m_xcols.Items.Add(new ListItem(field.Title, field.InternalName));
                     }
                     m_ycols.Items.Add(new ListItem(field.Title, field.InternalName));
                 }
             }
-            m_xcols.Items.Add(new ListItem("(Item count)", "**count**"));
+            m_xcols.Items.Add(new ListItem(Properties.Resources.ItemCount, "**count**"));
         }
 
         private bool isNumericField(SPField field) {

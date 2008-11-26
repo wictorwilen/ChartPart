@@ -23,6 +23,20 @@ http://www.opensource.org/licenses/ms-pl.html
         <property name="ExportMode" type="exportmode">All</property>
         <property name="TitleIconImageUrl" type="string">/_layouts/images/ChartPart/oscillator_16.gif</property>
         <property name="CatalogIconImageUrl" type="string">/_layouts/images/ChartPart/oscillator_16.gif</property>
+        <property name="LinkToSourceList" type="bool">false</property>
+        <property name="ChartBorder" type="bool">false</property>
+        <property name="TreatAsZero" type="bool">false</property>
+        <property name="ChartType" type="System.Web.UI.DataVisualization.Charting.SeriesChartType">Bar</property>
+        <property name="ShowLegend" type="bool">false</property>
+        <property name="ChartWidth" type="int">300</property>
+        <property name="ChartHeight" type="int">300</property>
+        <property name="ChartTitle" type="string"></property>
+        <property name="CustomPalette" type="bool">false</property>
+        <property name="CustomPaletteValues" type="string">#CCFF0000,#CC00FF00,#CC0000FF</property>
+        <property name="Enable3D" type="bool">false</property>
+        <property name="Palette" type="System.Web.UI.DataVisualization.Charting.ChartColorPalette">None</property>
+        <property name="DrawingStyle" type="ChartPart.DrawingStyle">Default</property>
+        
       </properties>
     </data>
   </webPart>

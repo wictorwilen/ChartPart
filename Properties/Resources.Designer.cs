@@ -61,11 +61,110 @@ namespace ChartPart.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Advanced Chart Settings.
+        /// </summary>
+        internal static string ChartAdv {
+            get {
+                return ResourceManager.GetString("ChartAdv", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Draw Border.
+        /// </summary>
+        internal static string ChartBorder {
+            get {
+                return ResourceManager.GetString("ChartBorder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Draws a border around the chart.
+        /// </summary>
+        internal static string ChartBorderDesc {
+            get {
+                return ResourceManager.GetString("ChartBorderDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ChartPart Settings.
         /// </summary>
         internal static string ChartPartSettings {
             get {
                 return ResourceManager.GetString("ChartPartSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chart type.
+        /// </summary>
+        internal static string ChartType {
+            get {
+                return ResourceManager.GetString("ChartType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Count.
+        /// </summary>
+        internal static string Count {
+            get {
+                return ResourceManager.GetString("Count", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom colors.
+        /// </summary>
+        internal static string CustomColors {
+            get {
+                return ResourceManager.GetString("CustomColors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string CustomColorsDesc {
+            get {
+                return ResourceManager.GetString("CustomColorsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use Custom Palette.
+        /// </summary>
+        internal static string CustomPalette {
+            get {
+                return ResourceManager.GetString("CustomPalette", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use a custom palette by entering a set of colors to use.
+        /// </summary>
+        internal static string CustomPaletteDesc {
+            get {
+                return ResourceManager.GetString("CustomPaletteDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom palette values.
+        /// </summary>
+        internal static string CustomPaletteValues {
+            get {
+                return ResourceManager.GetString("CustomPaletteValues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter custom colors, separated with commas.
+        /// </summary>
+        internal static string CustomPaletteValuesDesc {
+            get {
+                return ResourceManager.GetString("CustomPaletteValuesDesc", resourceCulture);
             }
         }
         
@@ -79,11 +178,74 @@ namespace ChartPart.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Display in 3D.
+        /// </summary>
+        internal static string Enable3DMode {
+            get {
+                return ResourceManager.GetString("Enable3DMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An exception occurred:.
+        /// </summary>
+        internal static string ExceptionOccurred {
+            get {
+                return ResourceManager.GetString("ExceptionOccurred", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height.
+        /// </summary>
+        internal static string Height {
+            get {
+                return ResourceManager.GetString("Height", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height of chart in pixels.
+        /// </summary>
+        internal static string HeightDesc {
+            get {
+                return ResourceManager.GetString("HeightDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Item Count).
+        /// </summary>
+        internal static string ItemCount {
+            get {
+                return ResourceManager.GetString("ItemCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Legend.
         /// </summary>
         internal static string Legend {
             get {
                 return ResourceManager.GetString("Legend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Link to source list.
+        /// </summary>
+        internal static string LinkToSourceList {
+            get {
+                return ResourceManager.GetString("LinkToSourceList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The chart will be linked to the source list.
+        /// </summary>
+        internal static string LinkToSourceListDesc {
+            get {
+                return ResourceManager.GetString("LinkToSourceListDesc", resourceCulture);
             }
         }
         
@@ -97,11 +259,110 @@ namespace ChartPart.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No &lt;b&gt;List&lt;/b&gt; selected..
+        /// </summary>
+        internal static string MissingList {
+            get {
+                return ResourceManager.GetString("MissingList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No &lt;b&gt;Site&lt;/b&gt; selected..
+        /// </summary>
+        internal static string MissingSite {
+            get {
+                return ResourceManager.GetString("MissingSite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No &lt;b&gt;View&lt;/b&gt; selected..
+        /// </summary>
+        internal static string MissingView {
+            get {
+                return ResourceManager.GetString("MissingView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No &lt;b&gt;Columns for X-axis&lt;/b&gt; selected..
+        /// </summary>
+        internal static string MissingXAxis {
+            get {
+                return ResourceManager.GetString("MissingXAxis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No &lt;b&gt;Column for Y-axis&lt;/b&gt; selected..
+        /// </summary>
+        internal static string MissingYAxis {
+            get {
+                return ResourceManager.GetString("MissingYAxis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click here to open the Tool Pane....
+        /// </summary>
+        internal static string OpenToolPane {
+            get {
+                return ResourceManager.GetString("OpenToolPane", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Palette.
+        /// </summary>
+        internal static string Palette {
+            get {
+                return ResourceManager.GetString("Palette", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the palette to base the chart colors on.
+        /// </summary>
+        internal static string PaletteDesc {
+            get {
+                return ResourceManager.GetString("PaletteDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Legend.
+        /// </summary>
+        internal static string ShowLegend {
+            get {
+                return ResourceManager.GetString("ShowLegend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows the legend of the chart.
+        /// </summary>
+        internal static string ShowLegendDesc {
+            get {
+                return ResourceManager.GetString("ShowLegendDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Site.
         /// </summary>
         internal static string Site {
             get {
                 return ResourceManager.GetString("Site", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Style.
+        /// </summary>
+        internal static string Style {
+            get {
+                return ResourceManager.GetString("Style", resourceCulture);
             }
         }
         
@@ -115,11 +376,74 @@ namespace ChartPart.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Click to use builder.
+        /// </summary>
+        internal static string ToolBuilderToolTip {
+            get {
+                return ResourceManager.GetString("ToolBuilderToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Treat as zero.
+        /// </summary>
+        internal static string TreatAsZero {
+            get {
+                return ResourceManager.GetString("TreatAsZero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Treat null values as zero, otherwise don&apos;t include those rows at all.
+        /// </summary>
+        internal static string TreatAsZeroDesc {
+            get {
+                return ResourceManager.GetString("TreatAsZeroDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to View.
         /// </summary>
         internal static string View {
             get {
                 return ResourceManager.GetString("View", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Width.
+        /// </summary>
+        internal static string Width {
+            get {
+                return ResourceManager.GetString("Width", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Width of chart in pixels.
+        /// </summary>
+        internal static string WidthDesc {
+            get {
+                return ResourceManager.GetString("WidthDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to X-Series column(s).
+        /// </summary>
+        internal static string XSeries {
+            get {
+                return ResourceManager.GetString("XSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Y-Series column.
+        /// </summary>
+        internal static string YSeries {
+            get {
+                return ResourceManager.GetString("YSeries", resourceCulture);
             }
         }
     }

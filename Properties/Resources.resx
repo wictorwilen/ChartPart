@@ -117,26 +117,134 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ChartAdv" xml:space="preserve">
+    <value>Advanced Chart Settings</value>
+  </data>
+  <data name="ChartBorder" xml:space="preserve">
+    <value>Draw Border</value>
+  </data>
+  <data name="ChartBorderDesc" xml:space="preserve">
+    <value>Draws a border around the chart</value>
+  </data>
   <data name="ChartPartSettings" xml:space="preserve">
     <value>ChartPart Settings</value>
+  </data>
+  <data name="ChartType" xml:space="preserve">
+    <value>Chart type</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="CustomColors" xml:space="preserve">
+    <value>Custom colors</value>
+  </data>
+  <data name="CustomColorsDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomPalette" xml:space="preserve">
+    <value>Use Custom Palette</value>
+  </data>
+  <data name="CustomPaletteDesc" xml:space="preserve">
+    <value>Use a custom palette by entering a set of colors to use</value>
+  </data>
+  <data name="CustomPaletteValues" xml:space="preserve">
+    <value>Custom palette values</value>
+  </data>
+  <data name="CustomPaletteValuesDesc" xml:space="preserve">
+    <value>Enter custom colors, separated with commas</value>
   </data>
   <data name="DropDownSelect" xml:space="preserve">
     <value>-- Select --</value>
     <comment>Used in drop downs</comment>
   </data>
+  <data name="Enable3DMode" xml:space="preserve">
+    <value>Display in 3D</value>
+  </data>
+  <data name="ExceptionOccurred" xml:space="preserve">
+    <value>An exception occurred:</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="HeightDesc" xml:space="preserve">
+    <value>Height of chart in pixels</value>
+  </data>
+  <data name="ItemCount" xml:space="preserve">
+    <value>(Item Count)</value>
+  </data>
   <data name="Legend" xml:space="preserve">
     <value>Legend</value>
+  </data>
+  <data name="LinkToSourceList" xml:space="preserve">
+    <value>Link to source list</value>
+  </data>
+  <data name="LinkToSourceListDesc" xml:space="preserve">
+    <value>The chart will be linked to the source list</value>
   </data>
   <data name="List" xml:space="preserve">
     <value>List</value>
   </data>
+  <data name="MissingList" xml:space="preserve">
+    <value>No &lt;b&gt;List&lt;/b&gt; selected.</value>
+  </data>
+  <data name="MissingSite" xml:space="preserve">
+    <value>No &lt;b&gt;Site&lt;/b&gt; selected.</value>
+  </data>
+  <data name="MissingView" xml:space="preserve">
+    <value>No &lt;b&gt;View&lt;/b&gt; selected.</value>
+  </data>
+  <data name="MissingXAxis" xml:space="preserve">
+    <value>No &lt;b&gt;Columns for X-axis&lt;/b&gt; selected.</value>
+  </data>
+  <data name="MissingYAxis" xml:space="preserve">
+    <value>No &lt;b&gt;Column for Y-axis&lt;/b&gt; selected.</value>
+  </data>
+  <data name="OpenToolPane" xml:space="preserve">
+    <value>Click here to open the Tool Pane...</value>
+  </data>
+  <data name="Palette" xml:space="preserve">
+    <value>Palette</value>
+  </data>
+  <data name="PaletteDesc" xml:space="preserve">
+    <value>Select the palette to base the chart colors on</value>
+  </data>
+  <data name="ShowLegend" xml:space="preserve">
+    <value>Show Legend</value>
+  </data>
+  <data name="ShowLegendDesc" xml:space="preserve">
+    <value>Shows the legend of the chart</value>
+  </data>
   <data name="Site" xml:space="preserve">
     <value>Site</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Style</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>Title</value>
   </data>
+  <data name="ToolBuilderToolTip" xml:space="preserve">
+    <value>Click to use builder</value>
+  </data>
+  <data name="TreatAsZero" xml:space="preserve">
+    <value>Treat as zero</value>
+  </data>
+  <data name="TreatAsZeroDesc" xml:space="preserve">
+    <value>Treat null values as zero, otherwise don't include those rows at all</value>
+  </data>
   <data name="View" xml:space="preserve">
     <value>View</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="WidthDesc" xml:space="preserve">
+    <value>Width of chart in pixels</value>
+  </data>
+  <data name="XSeries" xml:space="preserve">
+    <value>X-Series column(s)</value>
+  </data>
+  <data name="YSeries" xml:space="preserve">
+    <value>Y-Series column</value>
   </data>
 </root>
