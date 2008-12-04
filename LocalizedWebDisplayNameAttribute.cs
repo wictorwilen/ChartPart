@@ -9,13 +9,14 @@ namespace ChartPart {
     /// Locallized version of the WebDisplayNameAttribute
     /// </summary>
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
-    public class LocalizedWebDisplayNameAttribute: WebDisplayNameAttribute {
-        bool m_isLocalized = false;
+    public sealed class LocalizedWebDisplayNameAttribute: WebDisplayNameAttribute {
+        bool m_isLocalized ;
 
         /// <summary>
         /// Initializes a new instance of the LocalizedWebDisplayNameAttribute class.
         /// </summary>
-        public LocalizedWebDisplayNameAttribute(string description) :base(description)  {
+        public LocalizedWebDisplayNameAttribute(string displayName)
+            : base(displayName) {
         }
 
         /// <summary>

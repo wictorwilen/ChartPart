@@ -13,10 +13,17 @@
 
 
 using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Resources;
 
 [assembly: AssemblyVersion("1.0.0.0")]
 
-
+[assembly: ComVisible(false)]
 
 [assembly: AssemblyTitleAttribute("ChartPart for SharePoint")]
 [assembly: AssemblyCompanyAttribute("Wictor Wilén")]
+[assembly: AssemblyCopyright("(C)Copyright Wictor Wilén 2008")]
+
+[assembly: NeutralResourcesLanguageAttribute("en", UltimateResourceFallbackLocation.MainAssembly)]
+
+

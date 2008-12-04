@@ -271,14 +271,11 @@ namespace ChartPart {
             m_xcols.Items.Add(new ListItem(Properties.Resources.ItemCount, "**count**"));
         }
 
-        private bool isNumericField(SPField field) {
+        private static bool isNumericField(SPField field) {
             if (field.FieldValueType == typeof(System.Double)) {
                 return true;
             }
             return false;
         }
-
-
-
     }
 }

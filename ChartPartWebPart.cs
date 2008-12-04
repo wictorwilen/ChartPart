@@ -46,6 +46,42 @@ namespace ChartPart {
 
 
 
+        private static void addPoints(Dictionary<string, double> data, ChartArea chartArea, Series series, SPField yField) {
+            foreach (string key in data.Keys) {
+                if (yField.FieldValueType == typeof(DateTime)) {
+                    series.XValueType = ChartValueType.DateTime;
+                    series.Points.AddXY(DateTime.Parse(key, CultureInfo.CurrentCulture), data[key]);
+                }
+                else if (yField.FieldValueType == typeof(SPFieldUserValue)) {
+                    series.XValueType = ChartValueType.String;
+                    chartArea.AxisX.Interval = 1;
+                    series.Points.AddXY(key.Substring(key.IndexOf(";#", StringComparison.InvariantCulture) + 2), data[key]);
+
+                }
+                else if (yField.FieldValueType == typeof(SPFieldCalculated)) {
+                    series.XValueType = ChartValueType.String;
+                    series.Points.AddXY(key.Remove(0, (key.IndexOf("#", StringComparison.InvariantCulture) + 1)), data[key]);
+                }
+
+                else if (yField.FieldValueType == typeof(string) || yField.Type == SPFieldType.Computed) {
+                    series.XValueType = ChartValueType.String;
+                    chartArea.AxisX.Interval = 1;
+                    series.Points.AddXY(key, data[key]);
+                }
+                else if (yField.Type == SPFieldType.Lookup) {
+                    series.XValueType = ChartValueType.String;
+                    chartArea.AxisX.Interval = 1;
+                    series.Points.AddXY(key.Remove(0, (key.IndexOf("#", StringComparison.InvariantCulture) + 1)), data[key]);
+                }
+                else if (yField.FieldValueType == null) {
+                    series.Points.AddXY(key, data[key]);
+                }
+
+                else {
+                    series.Points.Add(data[key]);
+                }
+            }
+        }
         protected override void GenerateChart() {
             if (!string.IsNullOrEmpty(this.ChartTitle)) {
                 Title title = new Title(this.ChartTitle, Docking.Top);
@@ -120,37 +156,11 @@ namespace ChartPart {
                             }
                         }
 
-                        foreach (string key in data.Keys) {
-                            if (yField.FieldValueType == typeof(DateTime)) {
-                                series.XValueType = ChartValueType.DateTime;
-                                series.Points.AddXY(DateTime.Parse(key, CultureInfo.CurrentCulture), data[key]);
-                            } 
-                            else if (yField.FieldValueType == typeof(SPFieldUserValue)) {
-                                series.XValueType = ChartValueType.String;
-                                
-                                series.Points.AddXY(key.Substring(key.IndexOf(";#")+2), data[key]);
-                                
-                            }
-                            else if (yField.FieldValueType == typeof(SPFieldCalculated)) {
-                                series.XValueType = ChartValueType.String;
-                                series.Points.AddXY(key.Remove(0, (key.IndexOf("#") + 1)), data[key]);
-                            }
+                        addPoints(data, chartArea, series, yField);
 
-                            else if (yField.FieldValueType == typeof(string) || yField.Type == SPFieldType.Computed) {
-                                series.XValueType = ChartValueType.String;
-                                chartArea.AxisX.Interval = 1;
-                                series.Points.AddXY(key, data[key]);
-                            }                            
-                            else if (yField.FieldValueType == null) {
-                                series.Points.AddXY(key, data[key]);
-                            }
-                            
-                            else {
-                                series.Points.Add(data[key]);
-                            }
-                        }
+                        // add tooltips
                         foreach (DataPoint point in series.Points) {
-                            point.ToolTip = string.Format("{0}", point.YValues[0]);
+                            point.ToolTip = string.Format(CultureInfo.CurrentCulture, "{0}", point.YValues[0]);
 
                         }
                         data.Clear();
@@ -169,9 +179,10 @@ namespace ChartPart {
 
 
             // Legend
-            m_chart.Legends.Add("Legend1");
-            m_chart.Legends["Legend1"].Title = Properties.Resources.Legend;
-            m_chart.Legends["Legend1"].Enabled = this.ShowLegend;
+            Legend legend = m_chart.Legends.Add("Legend1");
+            legend.Title = Properties.Resources.Legend;
+            legend.Enabled = this.ShowLegend;
+            
         }
 
 

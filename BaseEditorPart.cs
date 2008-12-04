@@ -20,6 +20,7 @@ using System.Web.UI;
 using System.Threading;
 using Microsoft.SharePoint.Utilities;
 using System.Web.UI.HtmlControls;
+using System.Globalization;
 
 
 namespace ChartPart {
@@ -99,15 +100,15 @@ namespace ChartPart {
             button.ToolTip = Properties.Resources.ToolBuilderToolTip;
             button.TabIndex = 0;
             button.Text = "...";
-            button.OnClientClick = string.Format("javascript:MSOPGrid_doBuilder('{0}?culture={1}', {2}, 'dialogHeight:340px;dialogWidth:430px;help:no;status:no;resizable:yes');",
+            button.OnClientClick = string.Format(CultureInfo.CurrentCulture, "javascript:MSOPGrid_doBuilder('{0}?culture={1}', {2}, 'dialogHeight:340px;dialogWidth:430px;help:no;status:no;resizable:yes');",
                 SPHttpUtility.EcmaScriptStringLiteralEncode("/lt/_layouts/zoombldr.aspx"),
                 Thread.CurrentThread.CurrentUICulture,
                 SPHttpUtility.EcmaScriptStringLiteralEncode(textBox.ClientID));
             button.Style.Add("display", "none");
             button.Attributes.Add("onfocusout", "this.style.display='none';");
 
-            textBox.Attributes.Add("onfocusin", string.Format("MSOPGrid_BuilderVisible({0});", button.ClientID));
-            textBox.Attributes.Add("ondeactivate", string.Format("MSOTlPn_prevBuilder={0};", button.ClientID));
+            textBox.Attributes.Add("onfocusin", string.Format(CultureInfo.InvariantCulture, "MSOPGrid_BuilderVisible({0});", button.ClientID));
+            textBox.Attributes.Add("ondeactivate", string.Format(CultureInfo.InvariantCulture, "MSOTlPn_prevBuilder={0};", button.ClientID));
             textBox.Attributes.Add("ms-TlPnWiden", "true");
 
 
@@ -122,15 +123,15 @@ namespace ChartPart {
             this.EditorPanel.Controls.Add(this.EditorTable);
         }
 
-        protected TextBox CreateEditorPartTextBox() {
+        protected static TextBox CreateEditorPartTextBox() {
             TextBox textBox = new TextBox();
             textBox.CssClass = "UserInput";
-            textBox.Width = new Unit("176px");
+            textBox.Width = new Unit("176px", CultureInfo.InvariantCulture);
             return textBox;
         }
    
 
-        protected TableRow CreateToolPaneRow(string title, Control[] controls) {
+        protected static TableRow CreateToolPaneRow(string title, Control[] controls) {
             TableRow row = new TableRow();
             TableCell cell = new TableCell();
             cell.Controls.Add(new LiteralControl("<div class='UserSectionHead'>" + title + "</div>"));
@@ -149,7 +150,7 @@ namespace ChartPart {
             return row;
 
         }
-        protected TableRow CreateToolPaneRowWithBuilder(string title, TextBox textBox) {
+        protected static TableRow CreateToolPaneRowWithBuilder(string title, TextBox textBox) {
             TableRow row = new TableRow();
             TableCell cell = new TableCell();
             row.Cells.Add(cell);
@@ -165,7 +166,7 @@ namespace ChartPart {
             return row;
 
         }
-        protected TableRow CreateToolPaneSeparator() {
+        protected static TableRow CreateToolPaneSeparator() {
             TableRow row = new TableRow();
             TableCell cell = new TableCell();
             cell.Controls.Add(new LiteralControl("<div style='width:100%' class='UserDottedLine'></div>"));

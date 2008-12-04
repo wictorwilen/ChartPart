@@ -13,9 +13,10 @@ http://www.opensource.org/licenses/ms-pl.html
   Description="ChartPart by Wictor Wilén"
   Version="1.0.0.0"
   Scope="Site"
-  Hidden="false"
+  Hidden="true"
   ImageUrl="ChartPart\Oscillator_32.gif" 
     ReceiverAssembly="ChartPart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b674fbef227b83bb"
+  
   ReceiverClass="ChartPart.FeatureReceiver"  
 
   xmlns="http://schemas.microsoft.com/sharepoint/">

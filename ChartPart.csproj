@@ -130,6 +130,7 @@
     <Compile Include="ChartPartWebPart.cs" />
     <Compile Include="DrawingStyle.cs" />
     <Compile Include="FeatureReceiver.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="LocalizedCategoryAttribute.cs" />
     <Compile Include="LocalizedWebDescriptionAttribute.cs" />
     <Compile Include="LocalizedWebDisplayNameAttribute.cs" />
@@ -140,10 +141,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ChartPart.snk" />
+    <None Include="DeploymentFiles\install.cmd" />
     <None Include="DeploymentFiles\SolutionConfig.xml" />
     <None Include="DeploymentFiles\Microsoft.SharePoint.targets" />
     <None Include="DeploymentFiles\manifest.xml" />
     <None Include="DeploymentFiles\SolutionPackage.ddf" />
+    <None Include="DeploymentFiles\uninstall.cmd" />
     <None Include="RootFiles\TEMPLATE\FEATURES\ChartPart\WebParts\ChartPart.webpart" />
     <None Include="RootFiles\TEMPLATE\FEATURES\ChartPart\WebParts.xml" />
     <None Include="RootFiles\TEMPLATE\FEATURES\ChartPart\feature.xml" />
@@ -160,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.sv-SE.resx" />
     <EmbeddedResource Include="Properties\Resources.pt-PT.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-ES.resx" />
+    <EmbeddedResource Include="Properties\Resources.ru-RU.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="DeploymentFiles\Microsoft.SharePoint.targets" />

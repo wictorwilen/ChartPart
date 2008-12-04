@@ -118,133 +118,132 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ChartAdv" xml:space="preserve">
-    <value>Configurações Avançadas do Gráfico</value>
+    <value>Дополнительные параметры диаграммы</value>
   </data>
   <data name="ChartBorder" xml:space="preserve">
-    <value>Desenhar Borda</value>
+    <value>Рисовать рамку</value>
   </data>
   <data name="ChartBorderDesc" xml:space="preserve">
-    <value>Desenhar Borda sobre o Gráfico</value>
+    <value>Отображение рамки вокруг диаграммы</value>
   </data>
   <data name="ChartPartSettings" xml:space="preserve">
-    <value>Opções do ChartPart</value>
+    <value>Параметры ChartPart</value>
   </data>
   <data name="ChartType" xml:space="preserve">
-    <value>Tipo Gráfico</value>
+    <value>Тип диаграммы</value>
   </data>
   <data name="Count" xml:space="preserve">
-    <value>Contagem</value>
+    <value>Количество</value>
   </data>
   <data name="CustomColors" xml:space="preserve">
-    <value>Cores personalizadas</value>
+    <value>Настраиваемые цвета</value>
   </data>
   <data name="CustomColorsDesc" xml:space="preserve">
     <value />
   </data>
   <data name="CustomPalette" xml:space="preserve">
-    <value>Usar Palette personalizada</value>
+    <value>Использовать настраиваемую палитру</value>
   </data>
   <data name="CustomPaletteDesc" xml:space="preserve">
-    <value>Inserir um conjunto de cores a usar através palette personalizada</value>
+    <value>Использование палитры с настраивыемым набором цветов</value>
   </data>
   <data name="CustomPaletteValues" xml:space="preserve">
-    <value>Palette personalizada de valores</value>
+    <value>Набор цветов палитры</value>
   </data>
   <data name="CustomPaletteValuesDesc" xml:space="preserve">
-    <value>Escolha cores personalizadas, separados por vírgulas</value>
+    <value>Введите список цветов палитры через запятую</value>
   </data>
   <data name="DropDownSelect" xml:space="preserve">
-    <value>-- Seleccionar --</value>
-    <comment>Used in drop downs</comment>
+    <value>-- Выберите --</value>
   </data>
   <data name="Enable3DMode" xml:space="preserve">
-    <value>Activar modo 3D</value>
+    <value>Отображать в режиме 3D</value>
   </data>
   <data name="ExceptionOccurred" xml:space="preserve">
-    <value>Ocorreu uma excepção:</value>
+    <value>Возникло исключение:</value>
   </data>
   <data name="Height" xml:space="preserve">
-    <value>Altura</value>
+    <value>Высота</value>
   </data>
   <data name="HeightDesc" xml:space="preserve">
-    <value>Altura do Gráfico em pixels</value>
+    <value>Высота диаграммы в пикселях</value>
   </data>
   <data name="ItemCount" xml:space="preserve">
-    <value>(Contagem de valores)</value>
+    <value>(Количество элементов)</value>
   </data>
   <data name="Legend" xml:space="preserve">
-    <value>Legenda</value>
+    <value>Легенда</value>
   </data>
   <data name="LinkToSourceList" xml:space="preserve">
-    <value>Link para lista principal</value>
+    <value>Ссылаться на список данных</value>
   </data>
   <data name="LinkToSourceListDesc" xml:space="preserve">
-    <value>O gráfico vai  ligar a lista principal</value>
+    <value>Диаграмма будет содержать ссылки на список источника данных</value>
   </data>
   <data name="List" xml:space="preserve">
-    <value>Lista</value>
+    <value>Список</value>
   </data>
   <data name="MissingList" xml:space="preserve">
-    <value>Não foi seleccionada a &lt;b&gt;Lista&lt;/b&gt;.</value>
+    <value>Не указан &lt;b&gt;Список&lt;/b&gt; источника данных.</value>
   </data>
   <data name="MissingSite" xml:space="preserve">
-    <value>Não foi seleccionada o &lt;b&gt;Site&lt;/b&gt;.</value>
+    <value>Не указан &lt;b&gt;Узел&lt;/b&gt; источника данных.</value>
   </data>
   <data name="MissingView" xml:space="preserve">
-    <value>Não foi seleccionada a &lt;b&gt;Vista&lt;/b&gt;.</value>
+    <value>Не указано &lt;b&gt;Представление&lt;/b&gt; списка источника данных.</value>
   </data>
   <data name="MissingXAxis" xml:space="preserve">
-    <value>Não foi seleccionada a &lt;b&gt;Coluna para o eixo-X&lt;/b&gt;.</value>
+    <value>Не указаны &lt;b&gt;Столбцы оси X&lt;/b&gt;.</value>
   </data>
   <data name="MissingYAxis" xml:space="preserve">
-    <value>Não foi seleccionada a &lt;b&gt;Coluna para o eixo-Y&lt;/b&gt;.</value>
+    <value>Не указан &lt;b&gt;Столбец оси Y&lt;/b&gt;.</value>
   </data>
   <data name="OpenToolPane" xml:space="preserve">
-    <value>Clique aqui para abrir a Ferramenta...</value>
+    <value>Кликните сюда, чтобы открыть панель инструментов веб-части…</value>
   </data>
   <data name="Palette" xml:space="preserve">
-    <value>Palette</value>
+    <value>Палитра</value>
   </data>
   <data name="PaletteDesc" xml:space="preserve">
-    <value>Seleccione a palette  para cores do Gráfico</value>
+    <value>Выберите один из базовых типов палитры цветов</value>
   </data>
   <data name="ShowLegend" xml:space="preserve">
-    <value>Apresentar Legenda</value>
+    <value>Отображать легенду</value>
   </data>
   <data name="ShowLegendDesc" xml:space="preserve">
-    <value>Apresentar Legenda do Gráfico</value>
+    <value>Отображать легенду на диаграмме</value>
   </data>
   <data name="Site" xml:space="preserve">
-    <value>Site</value>
+    <value>Узел</value>
   </data>
   <data name="Style" xml:space="preserve">
-    <value>Style</value>
+    <value>Стиль</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Título</value>
+    <value>Заголовок</value>
   </data>
   <data name="ToolBuilderToolTip" xml:space="preserve">
-    <value>Clicar para usar construtor</value>
+    <value>Кликните, чтобы использовать построитель</value>
   </data>
   <data name="TreatAsZero" xml:space="preserve">
-    <value>Alterar valores para zero</value>
+    <value>Обрабатывать пустые</value>
   </data>
   <data name="TreatAsZeroDesc" xml:space="preserve">
-    <value>Alterar valores nulos para zero, ou não irá incluir nas linhas.</value>
+    <value>Обрабатывать пустые значения как ноли или исключать эти значения</value>
   </data>
   <data name="View" xml:space="preserve">
-    <value>Vista</value>
+    <value>Представление</value>
   </data>
   <data name="Width" xml:space="preserve">
-    <value>Comprimento</value>
+    <value>Ширина</value>
   </data>
   <data name="WidthDesc" xml:space="preserve">
-    <value>Comprimento do gráfico em pixels</value>
+    <value>Ширина диаграммы в пикселях</value>
   </data>
   <data name="XSeries" xml:space="preserve">
-    <value>Colunas "X-Series"</value>
+    <value>Столбцы оси X</value>
   </data>
   <data name="YSeries" xml:space="preserve">
-    <value>Colunas "Y-Series"</value>
+    <value>Столбец оси Y</value>
   </data>
 </root>
