@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdvancedChartSettings" xml:space="preserve">
+    <value>Advanced Chart Settings</value>
+  </data>
+  <data name="BorderColor" xml:space="preserve">
+    <value>Border color</value>
+  </data>
+  <data name="BorderLine" xml:space="preserve">
+    <value>Border line</value>
+  </data>
+  <data name="BorderStyle" xml:space="preserve">
+    <value>Border style</value>
+  </data>
+  <data name="BorderWidth" xml:space="preserve">
+    <value>Border width</value>
+  </data>
+  <data name="ChartBorder" xml:space="preserve">
+    <value>Draw Border</value>
+  </data>
+  <data name="ChartBorderDesc" xml:space="preserve">
+    <value>Draws a border around the chart</value>
+  </data>
+  <data name="ChartPartDesc" xml:space="preserve">
+    <value>ChartPart by Wictor Wilén</value>
+  </data>
+  <data name="ChartPartSettings" xml:space="preserve">
+    <value>ChartPart Settings</value>
+  </data>
+  <data name="ChartPartTitle" xml:space="preserve">
+    <value>ChartPart</value>
+  </data>
+  <data name="ChartType" xml:space="preserve">
+    <value>Chart type</value>
+  </data>
+  <data name="ColNameTooltip" xml:space="preserve">
+    <value>Include column name in tooltip</value>
+  </data>
+  <data name="ColNameTooltipDesc" xml:space="preserve">
+    <value>Includes the name of the column in the column tooltip</value>
+  </data>
+  <data name="ColorParseError" xml:space="preserve">
+    <value>One or more colors in the custom colors could not be parsed</value>
+  </data>
+  <data name="ColValueTooltip" xml:space="preserve">
+    <value>Display column value in tooltip</value>
+  </data>
+  <data name="ColValueTooltipDesc" xml:space="preserve">
+    <value>Displays the value of the column in the column tooltip</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="CustomColors" xml:space="preserve">
+    <value>Custom colors</value>
+  </data>
+  <data name="CustomColorsDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomPalette" xml:space="preserve">
+    <value>Use Custom Palette</value>
+  </data>
+  <data name="CustomPaletteDesc" xml:space="preserve">
+    <value>Use a custom palette by entering a set of colors to use</value>
+  </data>
+  <data name="CustomPaletteValues" xml:space="preserve">
+    <value>Custom palette values</value>
+  </data>
+  <data name="CustomPaletteValuesDesc" xml:space="preserve">
+    <value>Enter custom colors, separated with commas</value>
+  </data>
+  <data name="DropDownSelect" xml:space="preserve">
+    <value>-- Select --</value>
+    <comment>Used in drop downs</comment>
+  </data>
+  <data name="Enable3DMode" xml:space="preserve">
+    <value>Display in 3D</value>
+  </data>
+  <data name="ExceptionOccurred" xml:space="preserve">
+    <value>An exception occurred:</value>
+  </data>
+  <data name="FontSz" xml:space="preserve">
+    <value>Font size</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="HeightDesc" xml:space="preserve">
+    <value>Height of chart in pixels</value>
+  </data>
+  <data name="Inclination" xml:space="preserve">
+    <value>Inclination</value>
+  </data>
+  <data name="InvalidValue" xml:space="preserve">
+    <value>Invalid value</value>
+  </data>
+  <data name="Isometric" xml:space="preserve">
+    <value>Isometric projection</value>
+  </data>
+  <data name="ItemCount" xml:space="preserve">
+    <value>(Item Count)</value>
+  </data>
+  <data name="Legend" xml:space="preserve">
+    <value>Legend</value>
+  </data>
+  <data name="LegendPosition" xml:space="preserve">
+    <value>Legend position</value>
+  </data>
+  <data name="LegendStyle" xml:space="preserve">
+    <value>Legend style</value>
+  </data>
+  <data name="LightStyle" xml:space="preserve">
+    <value>Light style</value>
+  </data>
+  <data name="LinkToSourceList" xml:space="preserve">
+    <value>Link to source list</value>
+  </data>
+  <data name="LinkToSourceListDesc" xml:space="preserve">
+    <value>The chart will be linked to the source list</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="Logarithmic" xml:space="preserve">
+    <value>Logarithmic</value>
+  </data>
+  <data name="MissingList" xml:space="preserve">
+    <value>No &lt;b&gt;List&lt;/b&gt; selected.</value>
+  </data>
+  <data name="MissingSite" xml:space="preserve">
+    <value>No &lt;b&gt;Site&lt;/b&gt; selected.</value>
+  </data>
+  <data name="MissingView" xml:space="preserve">
+    <value>No &lt;b&gt;View&lt;/b&gt; selected.</value>
+  </data>
+  <data name="MissingXAxis" xml:space="preserve">
+    <value>No &lt;b&gt;Columns for X-axis&lt;/b&gt; selected.</value>
+  </data>
+  <data name="MissingYAxis" xml:space="preserve">
+    <value>No &lt;b&gt;Column for Y-axis&lt;/b&gt; selected.</value>
+  </data>
+  <data name="MultipleCharts" xml:space="preserve">
+    <value>Multiple Charts</value>
+  </data>
+  <data name="MultipleChartsDesc" xml:space="preserve">
+    <value>Show each series as a separate chart</value>
+  </data>
+  <data name="OpenToolPane" xml:space="preserve">
+    <value>Click here to open the Tool Pane...</value>
+  </data>
+  <data name="Palette" xml:space="preserve">
+    <value>Palette</value>
+  </data>
+  <data name="PaletteDesc" xml:space="preserve">
+    <value>Select the palette to base the chart colors on</value>
+  </data>
+  <data name="Perspective" xml:space="preserve">
+    <value>Perspective</value>
+  </data>
+  <data name="Rotation" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="ShowLegend" xml:space="preserve">
+    <value>Show Legend</value>
+  </data>
+  <data name="ShowLegendDesc" xml:space="preserve">
+    <value>Shows the legend of the chart</value>
+  </data>
+  <data name="ShowValueLabel" xml:space="preserve">
+    <value>Show value as label</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="ThreeDCharts" xml:space="preserve">
+    <value>3D Charts</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="TitleFontSz" xml:space="preserve">
+    <value>Title font size</value>
+  </data>
+  <data name="ToolBuilderToolTip" xml:space="preserve">
+    <value>Click to use builder</value>
+  </data>
+  <data name="TreatAsZero" xml:space="preserve">
+    <value>Treat as zero</value>
+  </data>
+  <data name="TreatAsZeroDesc" xml:space="preserve">
+    <value>Treat null values as zero, otherwise don't include those rows at all</value>
+  </data>
+  <data name="UseLogarithmic" xml:space="preserve">
+    <value>Use Logarithmic scaling</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="WidthDesc" xml:space="preserve">
+    <value>Width of chart in pixels</value>
+  </data>
+  <data name="XSeries" xml:space="preserve">
+    <value>X-Series column(s)</value>
+  </data>
+  <data name="YAxisMissing" xml:space="preserve">
+    <value>Y-Axis is not found in the connected List</value>
+  </data>
+  <data name="YSeries" xml:space="preserve">
+    <value>Y-Series column</value>
+  </data>
+</root>

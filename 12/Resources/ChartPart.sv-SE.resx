@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdvancedChartSettings" xml:space="preserve">
+    <value>Avancerade graf inställningar</value>
+  </data>
+  <data name="BorderColor" xml:space="preserve">
+    <value>Ramfärg</value>
+  </data>
+  <data name="BorderLine" xml:space="preserve">
+    <value>Ramlinje</value>
+  </data>
+  <data name="BorderStyle" xml:space="preserve">
+    <value>Ramstil</value>
+  </data>
+  <data name="BorderWidth" xml:space="preserve">
+    <value>Rambredd</value>
+  </data>
+  <data name="ChartBorder" xml:space="preserve">
+    <value>Använd ram</value>
+  </data>
+  <data name="ChartBorderDesc" xml:space="preserve">
+    <value>Ritar en ram runt grafen</value>
+  </data>
+  <data name="ChartPartDesc" xml:space="preserve">
+    <value>ChartPart av Wictor Wilén</value>
+  </data>
+  <data name="ChartPartSettings" xml:space="preserve">
+    <value>ChartPart inställningar</value>
+  </data>
+  <data name="ChartPartTitle" xml:space="preserve">
+    <value>ChartPart</value>
+  </data>
+  <data name="ChartType" xml:space="preserve">
+    <value>Graftyp</value>
+  </data>
+  <data name="ColNameTooltip" xml:space="preserve">
+    <value>Inkludera kolumnnamn i tooltip</value>
+  </data>
+  <data name="ColNameTooltipDesc" xml:space="preserve">
+    <value>Inkluderar kolumnens namn i kolumnens tooltip</value>
+  </data>
+  <data name="ColorParseError" xml:space="preserve">
+    <value>En eller flera färger kunder inte hanteras</value>
+  </data>
+  <data name="ColValueTooltip" xml:space="preserve">
+    <value>Visa kolumnvärde i tooltip</value>
+  </data>
+  <data name="ColValueTooltipDesc" xml:space="preserve">
+    <value>Visar värdet av kolumnen i kolumnens tooltip</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Antal</value>
+  </data>
+  <data name="CustomColors" xml:space="preserve">
+    <value>Egna färger</value>
+  </data>
+  <data name="CustomColorsDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomPalette" xml:space="preserve">
+    <value>Använd egna färger</value>
+  </data>
+  <data name="CustomPaletteDesc" xml:space="preserve">
+    <value>Använd egna färger genom att skriva in en egen uppsättning av färger</value>
+  </data>
+  <data name="CustomPaletteValues" xml:space="preserve">
+    <value>Egna färgvärden</value>
+  </data>
+  <data name="CustomPaletteValuesDesc" xml:space="preserve">
+    <value>Skriv in egna färgvärden, separerade med komma</value>
+  </data>
+  <data name="DropDownSelect" xml:space="preserve">
+    <value>-- Välj --</value>
+  </data>
+  <data name="Enable3DMode" xml:space="preserve">
+    <value>Visa i 3D</value>
+  </data>
+  <data name="ExceptionOccurred" xml:space="preserve">
+    <value>Ett fel uppstod:</value>
+  </data>
+  <data name="FontSz" xml:space="preserve">
+    <value>Typsnittsstorlek</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Höjd</value>
+  </data>
+  <data name="HeightDesc" xml:space="preserve">
+    <value>Grafens höjd i pixlar</value>
+  </data>
+  <data name="Inclination" xml:space="preserve">
+    <value>Lutning</value>
+  </data>
+  <data name="InvalidValue" xml:space="preserve">
+    <value>Felaktigt värde</value>
+  </data>
+  <data name="Isometric" xml:space="preserve">
+    <value>Isometrisk projektion</value>
+  </data>
+  <data name="ItemCount" xml:space="preserve">
+    <value>(Antal)</value>
+  </data>
+  <data name="Legend" xml:space="preserve">
+    <value>Beskrivning</value>
+  </data>
+  <data name="LegendPosition" xml:space="preserve">
+    <value>Beskrivningsposition</value>
+  </data>
+  <data name="LegendStyle" xml:space="preserve">
+    <value>Beskrivningsstil</value>
+  </data>
+  <data name="LightStyle" xml:space="preserve">
+    <value>Ljusstil</value>
+  </data>
+  <data name="LinkToSourceList" xml:space="preserve">
+    <value>Länka till käll-listan</value>
+  </data>
+  <data name="LinkToSourceListDesc" xml:space="preserve">
+    <value>Grafen kommer att länkas till käll-listan</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>Lista</value>
+  </data>
+  <data name="Logarithmic" xml:space="preserve">
+    <value>Logaritmisk</value>
+  </data>
+  <data name="MissingList" xml:space="preserve">
+    <value>Ingen &lt;b&gt;Lista&lt;/b&gt; vald</value>
+  </data>
+  <data name="MissingSite" xml:space="preserve">
+    <value>Ingen &lt;b&gt;Webbplats&lt;/b&gt; vald</value>
+  </data>
+  <data name="MissingView" xml:space="preserve">
+    <value>Ingen &lt;b&gt;Vy&lt;/b&gt; vald</value>
+  </data>
+  <data name="MissingXAxis" xml:space="preserve">
+    <value>Ingen &lt;b&gt;kolumn för X-axeln&lt;/b&gt; vald</value>
+  </data>
+  <data name="MissingYAxis" xml:space="preserve">
+    <value>Ingen &lt;b&gt;kolumn för Y-axeln&lt;/b&gt; vald</value>
+  </data>
+  <data name="MultipleCharts" xml:space="preserve">
+    <value>Flera grafer</value>
+  </data>
+  <data name="MultipleChartsDesc" xml:space="preserve">
+    <value>Varje serie som en egen graf</value>
+  </data>
+  <data name="OpenToolPane" xml:space="preserve">
+    <value>Klicka här för att öppna redigeringsvyn</value>
+  </data>
+  <data name="Palette" xml:space="preserve">
+    <value>Palett</value>
+  </data>
+  <data name="PaletteDesc" xml:space="preserve">
+    <value>Välj palett att basera grafens färger på</value>
+  </data>
+  <data name="Perspective" xml:space="preserve">
+    <value>Perspektiv</value>
+  </data>
+  <data name="Rotation" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="ShowLegend" xml:space="preserve">
+    <value>Visa beskrivning</value>
+  </data>
+  <data name="ShowLegendDesc" xml:space="preserve">
+    <value>Visar grafens beskrivning</value>
+  </data>
+  <data name="ShowValueLabel" xml:space="preserve">
+    <value>Visa värde som titel</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>Webbplats</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Stil</value>
+  </data>
+  <data name="ThreeDCharts" xml:space="preserve">
+    <value>3D Grafer</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="TitleFontSz" xml:space="preserve">
+    <value>Titel typsnittsstorlek</value>
+  </data>
+  <data name="ToolBuilderToolTip" xml:space="preserve">
+    <value>Klicka här för att redigera</value>
+  </data>
+  <data name="TreatAsZero" xml:space="preserve">
+    <value>Hantera som noll</value>
+  </data>
+  <data name="TreatAsZeroDesc" xml:space="preserve">
+    <value>Hanterar null-värden som noll, i annat fall inkluderas ej de värdena</value>
+  </data>
+  <data name="UseLogarithmic" xml:space="preserve">
+    <value>Använd logaritmisk skala</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Vy</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>Bredd</value>
+  </data>
+  <data name="WidthDesc" xml:space="preserve">
+    <value>Grafens bredd i pixlar</value>
+  </data>
+  <data name="XSeries" xml:space="preserve">
+    <value>X-seriens kolumn(er)</value>
+  </data>
+  <data name="YAxisMissing" xml:space="preserve">
+    <value>Y-axel kan inte hittas i den kopplade listan</value>
+  </data>
+  <data name="YSeries" xml:space="preserve">
+    <value>Y-seriens kolumn</value>
+  </data>
+</root>

@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdvancedChartSettings" xml:space="preserve">
+    <value>進階設定</value>
+  </data>
+  <data name="BorderColor" xml:space="preserve">
+    <value>邊框顏色</value>
+  </data>
+  <data name="BorderLine" xml:space="preserve">
+    <value>邊框線條</value>
+  </data>
+  <data name="BorderStyle" xml:space="preserve">
+    <value>邊框樣式</value>
+  </data>
+  <data name="BorderWidth" xml:space="preserve">
+    <value>邊框寬度</value>
+  </data>
+  <data name="ChartBorder" xml:space="preserve">
+    <value>顯示邊框</value>
+  </data>
+  <data name="ChartBorderDesc" xml:space="preserve">
+    <value>圖表周圍顯示邊框</value>
+  </data>
+  <data name="ChartPartDesc" xml:space="preserve">
+    <value>本 ChartPart 由 Wictor Wilén 開發</value>
+  </data>
+  <data name="ChartPartSettings" xml:space="preserve">
+    <value>設定 ChartPart</value>
+  </data>
+  <data name="ChartPartTitle" xml:space="preserve">
+    <value>ChartPart</value>
+  </data>
+  <data name="ChartType" xml:space="preserve">
+    <value>圖表類型</value>
+  </data>
+  <data name="ColNameTooltip" xml:space="preserve">
+    <value>在工具提示顯示欄位名稱</value>
+  </data>
+  <data name="ColNameTooltipDesc" xml:space="preserve">
+    <value>在工具提示顯示欄位名稱</value>
+  </data>
+  <data name="ColorParseError" xml:space="preserve">
+    <value>部份自定色彩值設置錯誤，無法解譯</value>
+  </data>
+  <data name="ColValueTooltip" xml:space="preserve">
+    <value>在工具提示顯示欄位值</value>
+  </data>
+  <data name="ColValueTooltipDesc" xml:space="preserve">
+    <value>在工具提示顯示欄位值</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>計數</value>
+  </data>
+  <data name="CustomColors" xml:space="preserve">
+    <value>自定顏色</value>
+  </data>
+  <data name="CustomColorsDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomPalette" xml:space="preserve">
+    <value>使用自定色板</value>
+  </data>
+  <data name="CustomPaletteDesc" xml:space="preserve">
+    <value>使用自定色彩值的色板</value>
+  </data>
+  <data name="CustomPaletteValues" xml:space="preserve">
+    <value>輸入色值</value>
+  </data>
+  <data name="CustomPaletteValuesDesc" xml:space="preserve">
+    <value>輸入自定色值，以逗號分隔</value>
+  </data>
+  <data name="DropDownSelect" xml:space="preserve">
+    <value>－請選擇－</value>
+  </data>
+  <data name="Enable3DMode" xml:space="preserve">
+    <value>立體顯示</value>
+  </data>
+  <data name="ExceptionOccurred" xml:space="preserve">
+    <value>發生錯誤：</value>
+  </data>
+  <data name="FontSz" xml:space="preserve">
+    <value>字體大小</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="HeightDesc" xml:space="preserve">
+    <value>圖表高度</value>
+  </data>
+  <data name="Inclination" xml:space="preserve">
+    <value>傾斜</value>
+  </data>
+  <data name="InvalidValue" xml:space="preserve">
+    <value>內容錯誤</value>
+  </data>
+  <data name="Isometric" xml:space="preserve">
+    <value>等面績投影</value>
+  </data>
+  <data name="ItemCount" xml:space="preserve">
+    <value>（計數）</value>
+  </data>
+  <data name="Legend" xml:space="preserve">
+    <value>圖例</value>
+  </data>
+  <data name="LegendPosition" xml:space="preserve">
+    <value>圖例位置</value>
+  </data>
+  <data name="LegendStyle" xml:space="preserve">
+    <value>圖例樣式</value>
+  </data>
+  <data name="LightStyle" xml:space="preserve">
+    <value>燈光樣式</value>
+  </data>
+  <data name="LinkToSourceList" xml:space="preserve">
+    <value>連接到列表</value>
+  </data>
+  <data name="LinkToSourceListDesc" xml:space="preserve">
+    <value>設置圖表連到列表</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>列表</value>
+  </data>
+  <data name="Logarithmic" xml:space="preserve">
+    <value>對數縮放</value>
+  </data>
+  <data name="MissingList" xml:space="preserve">
+    <value>尚未選擇“列表”</value>
+  </data>
+  <data name="MissingSite" xml:space="preserve">
+    <value>尚未選擇“網站”</value>
+  </data>
+  <data name="MissingView" xml:space="preserve">
+    <value>尚未選擇“視圖”</value>
+  </data>
+  <data name="MissingXAxis" xml:space="preserve">
+    <value>尚未選擇“X軸欄位”</value>
+  </data>
+  <data name="MissingYAxis" xml:space="preserve">
+    <value>尚未選擇“Y軸欄位”</value>
+  </data>
+  <data name="MultipleCharts" xml:space="preserve">
+    <value>多圖表</value>
+  </data>
+  <data name="MultipleChartsDesc" xml:space="preserve">
+    <value>每個序列以單獨圖表顯示</value>
+  </data>
+  <data name="OpenToolPane" xml:space="preserve">
+    <value>點此開啟工具窗格…</value>
+  </data>
+  <data name="Palette" xml:space="preserve">
+    <value>調色盤</value>
+  </data>
+  <data name="PaletteDesc" xml:space="preserve">
+    <value>選擇圖表採用的調色盤</value>
+  </data>
+  <data name="Perspective" xml:space="preserve">
+    <value>視角</value>
+  </data>
+  <data name="Rotation" xml:space="preserve">
+    <value>旋轉</value>
+  </data>
+  <data name="ShowLegend" xml:space="preserve">
+    <value>顯示圖例</value>
+  </data>
+  <data name="ShowLegendDesc" xml:space="preserve">
+    <value>顯示圖表的圖例</value>
+  </data>
+  <data name="ShowValueLabel" xml:space="preserve">
+    <value>將值顯示為標籤</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>網站</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>樣式</value>
+  </data>
+  <data name="ThreeDCharts" xml:space="preserve">
+    <value>立體</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>標題</value>
+  </data>
+  <data name="TitleFontSz" xml:space="preserve">
+    <value>標題字體大小</value>
+  </data>
+  <data name="ToolBuilderToolTip" xml:space="preserve">
+    <value>點此使用建造器</value>
+  </data>
+  <data name="TreatAsZero" xml:space="preserve">
+    <value>視為零</value>
+  </data>
+  <data name="TreatAsZeroDesc" xml:space="preserve">
+    <value>空值視為零，否則將不包含該列</value>
+  </data>
+  <data name="UseLogarithmic" xml:space="preserve">
+    <value>使用對數縮放</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>視圖</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>寬度</value>
+  </data>
+  <data name="WidthDesc" xml:space="preserve">
+    <value>圖表寬度</value>
+  </data>
+  <data name="XSeries" xml:space="preserve">
+    <value>X系列值所在欄位</value>
+  </data>
+  <data name="YAxisMissing" xml:space="preserve">
+    <value>連接清單中沒能找到Y軸內容</value>
+  </data>
+  <data name="YSeries" xml:space="preserve">
+    <value>Y系列值所在欄位</value>
+  </data>
+</root>

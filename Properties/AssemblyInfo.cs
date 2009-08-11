@@ -2,7 +2,7 @@
  * 
  * ChartPart for SharePoint
  * ------------------------------------------
- * Copyright (c) 2008, Wictor Wilén
+ * Copyright (c) 2008-2009, Wictor Wilén
  * http://www.codeplex.com/ChartPart/
  * http://www.wictorwilen.se/
  * ------------------------------------------
@@ -13,17 +13,14 @@
 
 
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Resources;
+using System.Security;
+using System;
 
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("2.0.1.0")]
 
-[assembly: ComVisible(false)]
-
-[assembly: AssemblyTitleAttribute("ChartPart for SharePoint")]
+[assembly:AllowPartiallyTrustedCallers]
+[assembly:CLSCompliant(false)]
+[assembly: AssemblyTitleAttribute("ChartPart 2.0 for SharePoint")]
 [assembly: AssemblyCompanyAttribute("Wictor Wilén")]
-[assembly: AssemblyCopyright("(C)Copyright Wictor Wilén 2008")]
-
-[assembly: NeutralResourcesLanguageAttribute("en", UltimateResourceFallbackLocation.MainAssembly)]
-
-
+[assembly: AssemblyProductAttribute("ChartPart")]
+[assembly: AssemblyCopyrightAttribute("(C) Copyright Wictor Wilén 2008-2009")]

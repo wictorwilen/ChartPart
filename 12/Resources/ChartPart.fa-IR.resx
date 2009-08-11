@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+ 
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdvancedChartSettings" xml:space="preserve">
+    <value>تنظيمات پيشرفته نمودار</value>
+  </data>
+  <data name="BorderColor" xml:space="preserve">
+    <value>رنگ حاشيه</value>
+  </data>
+  <data name="BorderLine" xml:space="preserve">
+    <value>خط حاشيه</value>
+  </data>
+  <data name="BorderStyle" xml:space="preserve">
+    <value>سبك حاشيه</value>
+  </data>
+  <data name="BorderWidth" xml:space="preserve">
+    <value>عرض حاشيه</value>
+  </data>
+  <data name="ChartBorder" xml:space="preserve">
+    <value>ترسيم حاشيه</value>
+  </data>
+  <data name="ChartBorderDesc" xml:space="preserve">
+    <value>ترسيم يك حاشيه در اطراف نمودار</value>
+  </data>
+  <data name="ChartPartDesc" xml:space="preserve">
+    <value>ChartPart پياده سازي شده توسط Wictor Wilén</value>
+  </data>
+  <data name="ChartPartSettings" xml:space="preserve">
+    <value>تنظيمات ChartPart</value>
+  </data>
+  <data name="ChartPartTitle" xml:space="preserve">
+    <value>ChartPart</value>
+  </data>
+  <data name="ChartType" xml:space="preserve">
+    <value>نوع نمودار</value>
+  </data>
+  <data name="ColNameTooltip" xml:space="preserve">
+    <value>نمایش نام ستون به صورت tooltip</value>
+  </data>
+  <data name="ColNameTooltipDesc" xml:space="preserve">
+    <value>نمایش دادن نام ستون به صورت tooltip</value>
+  </data>
+  <data name="ColorParseError" xml:space="preserve">
+    <value>يك يا چند رنگ از رنگهاي سفارشي قابل تجزيه نيستند</value>
+  </data>
+  <data name="ColValueTooltip" xml:space="preserve">
+    <value>نمايش مقدار ستون به صورت tooltip</value>
+  </data>
+  <data name="ColValueTooltipDesc" xml:space="preserve">
+    <value>نمایش دادن مقدار ستون به صورت tooltip</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>تعداد</value>
+  </data>
+  <data name="CustomColors" xml:space="preserve">
+    <value>رنگهاي سفارشي</value>
+  </data>
+  <data name="CustomColorsDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomPalette" xml:space="preserve">
+    <value>استفاده از جدول رنگ سفارشي</value>
+  </data>
+  <data name="CustomPaletteDesc" xml:space="preserve">
+    <value>از یک جدول رنگ سفارشي با وارد کردن مجموعه ای از رنگها، استفاده کنید</value>
+  </data>
+  <data name="CustomPaletteValues" xml:space="preserve">
+    <value>مقادير جدول رنگ سفارشي</value>
+  </data>
+  <data name="CustomPaletteValuesDesc" xml:space="preserve">
+    <value>رنگهای سفارشی را وارد کنید، از علامت کاما جهت جداسازی استفاده نمایید</value>
+  </data>
+  <data name="DropDownSelect" xml:space="preserve">
+    <value>انتخاب کنید</value>
+  </data>
+  <data name="Enable3DMode" xml:space="preserve">
+    <value>نمايش 3 بعدي</value>
+  </data>
+  <data name="ExceptionOccurred" xml:space="preserve">
+    <value>يك خطاي غيرمنتظره رخ داد :</value>
+  </data>
+  <data name="FontSz" xml:space="preserve">
+    <value>اندازه قلم</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>ارتفاع</value>
+  </data>
+  <data name="HeightDesc" xml:space="preserve">
+    <value>ارتفاع نمودار برحسب پيكسل</value>
+  </data>
+  <data name="Inclination" xml:space="preserve">
+    <value>شيب</value>
+  </data>
+  <data name="InvalidValue" xml:space="preserve">
+    <value>مقدار نامعتبر</value>
+  </data>
+  <data name="Isometric" xml:space="preserve">
+    <value>پرتو هم اندازه</value>
+  </data>
+  <data name="ItemCount" xml:space="preserve">
+    <value>(تعداد آيتم)</value>
+  </data>
+  <data name="Legend" xml:space="preserve">
+    <value>راهنماي نمودار</value>
+  </data>
+  <data name="LegendPosition" xml:space="preserve">
+    <value>موقعيت راهنماي نمودار</value>
+  </data>
+  <data name="LegendStyle" xml:space="preserve">
+    <value>سبك راهنماي نمودار</value>
+  </data>
+  <data name="LightStyle" xml:space="preserve">
+    <value>سبك نور</value>
+  </data>
+  <data name="LinkToSourceList" xml:space="preserve">
+    <value>اتصال به ليست منبع</value>
+  </data>
+  <data name="LinkToSourceListDesc" xml:space="preserve">
+    <value>نمودار به لیست منبع متصل خواهد شد</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>ليست</value>
+  </data>
+  <data name="Logarithmic" xml:space="preserve">
+    <value>لگاریتمی</value>
+  </data>
+  <data name="MissingList" xml:space="preserve">
+    <value>&lt;b&gt;ليست&lt;b/&gt;انتخاب نشده است.</value>
+  </data>
+  <data name="MissingSite" xml:space="preserve">
+    <value>&lt;b&gt;سایت&lt;b/&gt;انتخاب نشده است.</value>
+  </data>
+  <data name="MissingView" xml:space="preserve">
+    <value>&lt;b&gt;نما&lt;b/&gt;انتخاب نشده است.</value>
+  </data>
+  <data name="MissingXAxis" xml:space="preserve">
+    <value>&lt;b&gt;ستوني براي محور b&gt;X/&gt;انتخاب نشده است.</value>
+  </data>
+  <data name="MissingYAxis" xml:space="preserve">
+    <value>&lt;b&gt;ستوني براي محور b&gt;Y/&gt;انتخاب نشده است.</value>
+  </data>
+  <data name="MultipleCharts" xml:space="preserve">
+    <value>نمودار چندگانه</value>
+  </data>
+  <data name="MultipleChartsDesc" xml:space="preserve">
+    <value>نمایش هر بخش به صورت نمودار جداگانه</value>
+  </data>
+  <data name="OpenToolPane" xml:space="preserve">
+    <value>جهت باز شدن نوار ابزار اينجا را كليك كنيد...</value>
+  </data>
+  <data name="Palette" xml:space="preserve">
+    <value>جدول رنگ</value>
+  </data>
+  <data name="PaletteDesc" xml:space="preserve">
+    <value>از جدول رنگ برای انتخاب رنگهای نمودار استفاده کنید</value>
+  </data>
+  <data name="Perspective" xml:space="preserve">
+    <value>پرسپكتيو</value>
+  </data>
+  <data name="Rotation" xml:space="preserve">
+    <value>چرخش</value>
+  </data>
+  <data name="ShowLegend" xml:space="preserve">
+    <value>نمايش راهنماي نمودار</value>
+  </data>
+  <data name="ShowLegendDesc" xml:space="preserve">
+    <value>نمايش دادن راهنماي نمودار</value>
+  </data>
+  <data name="ShowValueLabel" xml:space="preserve">
+    <value>نمايش مقدار به صورت برچسب</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>سايت</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>سبك</value>
+  </data>
+  <data name="ThreeDCharts" xml:space="preserve">
+    <value>نمودارهاي 3 بعدي</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="TitleFontSz" xml:space="preserve">
+    <value>اندازه قلم عنوان</value>
+  </data>
+  <data name="ToolBuilderToolTip" xml:space="preserve">
+    <value>براي استفاده از سازنده كليك كنيد</value>
+  </data>
+  <data name="TreatAsZero" xml:space="preserve">
+    <value>استفاده از عدد صفر</value>
+  </data>
+  <data name="TreatAsZeroDesc" xml:space="preserve">
+    <value>استفاده از عدد صفر به جای مقادیر null، در غیر اینصورت همه سطرهای آنها را شامل نمی شود</value>
+  </data>
+  <data name="UseLogarithmic" xml:space="preserve">
+    <value>استفاده از مقیاس لگاریتمی</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>نما</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="WidthDesc" xml:space="preserve">
+    <value>عرض نمودار بر حسب پيكسل</value>
+  </data>
+  <data name="XSeries" xml:space="preserve">
+    <value>ستون(هاي) مجموعه X</value>
+  </data>
+  <data name="YAxisMissing" xml:space="preserve">
+    <value>محور Y در ليست متصل شده يافت نشد</value>
+  </data>
+  <data name="YSeries" xml:space="preserve">
+    <value>ستون(هاي) مجموعه Y</value>
+  </data>
+</root>
