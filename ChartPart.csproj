@@ -117,6 +117,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="12\Resources\ChartPart.da-DK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="12\CONFIG\" />
     <Folder Include="12\TEMPLATE\FEATURES\ChartPart\Resources\" />
     <Folder Include="80\bin\" />

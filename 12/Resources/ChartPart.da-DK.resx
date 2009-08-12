@@ -118,216 +118,219 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AdvancedChartSettings" xml:space="preserve">
-    <value>进阶设定</value>
+    <value>Avanceret diagram indstillinger</value>
   </data>
   <data name="BorderColor" xml:space="preserve">
-    <value>边框颜色</value>
+    <value>Kantfarve</value>
   </data>
   <data name="BorderLine" xml:space="preserve">
-    <value>边框线条</value>
+    <value>Kantline</value>
   </data>
   <data name="BorderStyle" xml:space="preserve">
-    <value>边框样式</value>
+    <value>Kantstill</value>
   </data>
   <data name="BorderWidth" xml:space="preserve">
-    <value>边框宽度</value>
+    <value>Kantbredde</value>
   </data>
   <data name="ChartBorder" xml:space="preserve">
-    <value>显示边框</value>
+    <value>Tegn kant</value>
   </data>
   <data name="ChartBorderDesc" xml:space="preserve">
-    <value>图表周围显示边框</value>
+    <value>Tegn kant rundt om diagrammet</value>
   </data>
   <data name="ChartPartDesc" xml:space="preserve">
-    <value>本 ChartPart 由 Wictor Wilén 开发</value>
+    <value>ChartPart af Wictor Wilén</value>
   </data>
   <data name="ChartPartSettings" xml:space="preserve">
-    <value>设定 ChartPart</value>
+    <value>ChartPart indstillinger</value>
   </data>
   <data name="ChartPartTitle" xml:space="preserve">
     <value>ChartPart</value>
   </data>
   <data name="ChartType" xml:space="preserve">
-    <value>图表类型</value>
+    <value>Chart tybe</value>
   </data>
   <data name="ColNameTooltip" xml:space="preserve">
-    <value>在工具提示显示栏名称</value>
+    <value>Medtag kolonne navn i tooltip</value>
   </data>
   <data name="ColNameTooltipDesc" xml:space="preserve">
-    <value>在工具提示显示栏名称</value>
+    <value>Includes the name of the column in the column tooltip</value>
   </data>
   <data name="ColorParseError" xml:space="preserve">
-    <value>部份自定色彩值设置错误，无法解译</value>
+    <value>En eller flere farver i den tilpassede farver kunne ikke parses</value>
   </data>
   <data name="ColValueTooltip" xml:space="preserve">
-    <value>在工具提示显示栏值</value>
+    <value>Vis kolonne værdi i tooltip</value>
   </data>
   <data name="ColValueTooltipDesc" xml:space="preserve">
-    <value>在工具提示显示栏值</value>
+    <value>Viser værdien af kolonnen i kolonnen tooltip</value>
   </data>
   <data name="Count" xml:space="preserve">
-    <value>计数</value>
+    <value>Tæller</value>
   </data>
   <data name="CustomColors" xml:space="preserve">
-    <value>自定颜色</value>
+    <value>Brugerdefinerede farver</value>
   </data>
   <data name="CustomColorsDesc" xml:space="preserve">
     <value />
   </data>
   <data name="CustomPalette" xml:space="preserve">
-    <value>使用自定色板</value>
+    <value>Brug brugerdefinerede paletter</value>
   </data>
   <data name="CustomPaletteDesc" xml:space="preserve">
-    <value>使用自定色彩值的色板</value>
+    <value>Brug en brugerdefineret palet ved at indtaste en række farver til brug</value>
   </data>
   <data name="CustomPaletteValues" xml:space="preserve">
-    <value>输入色值</value>
+    <value>Brugerdefinerede palet værdier</value>
   </data>
   <data name="CustomPaletteValuesDesc" xml:space="preserve">
-    <value>输入自定色值，以逗号分隔</value>
+    <value>Indtast brugerdefinerede farver, adskilt med kommaer</value>
   </data>
   <data name="DropDownSelect" xml:space="preserve">
-    <value>－请选择－</value>
+    <value>-- Vælg --</value>
   </data>
   <data name="Enable3DMode" xml:space="preserve">
-    <value>立体显示</value>
+    <value>Vis i 3D</value>
   </data>
   <data name="ExceptionOccurred" xml:space="preserve">
-    <value>发生错误：</value>
+    <value>Der opstod en fejl:</value>
   </data>
   <data name="FontSz" xml:space="preserve">
-    <value>字体大小</value>
+    <value>Skriftstørrelse</value>
   </data>
   <data name="Height" xml:space="preserve">
-    <value>高度</value>
+    <value>Højde</value>
   </data>
   <data name="HeightDesc" xml:space="preserve">
-    <value>图表高度</value>
+    <value>Højde af diagrammet i pixel</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>da-DK</value>
   </data>
   <data name="Inclination" xml:space="preserve">
-    <value>倾斜</value>
+    <value>Hældning</value>
   </data>
   <data name="InvalidValue" xml:space="preserve">
-    <value>内容错误</value>
+    <value>Ugyldig værdi</value>
   </data>
   <data name="Isometric" xml:space="preserve">
-    <value>等面绩投影</value>
+    <value>Isometrisk projektion</value>
   </data>
   <data name="ItemCount" xml:space="preserve">
-    <value>（项数）</value>
+    <value>(Element tæller)</value>
   </data>
   <data name="Legend" xml:space="preserve">
-    <value>图例</value>
+    <value>Legende</value>
   </data>
   <data name="LegendPosition" xml:space="preserve">
-    <value>图例位置</value>
+    <value>Legende position</value>
   </data>
   <data name="LegendStyle" xml:space="preserve">
-    <value>图例样式</value>
+    <value>Legende stil</value>
   </data>
   <data name="LightStyle" xml:space="preserve">
-    <value>灯光样式</value>
+    <value>Lyseffekt stil</value>
   </data>
   <data name="LinkToSourceList" xml:space="preserve">
-    <value>连到列表</value>
+    <value>Link til kilde listen</value>
   </data>
   <data name="LinkToSourceListDesc" xml:space="preserve">
-    <value>设置图表连到列表</value>
+    <value>Diagrammet vil linket til kildelisten</value>
   </data>
   <data name="List" xml:space="preserve">
-    <value>列表</value>
+    <value>Listen</value>
   </data>
   <data name="Logarithmic" xml:space="preserve">
-    <value>对数缩放</value>
+    <value>Logaritme</value>
   </data>
   <data name="MissingList" xml:space="preserve">
-    <value>尚未选择“列表”</value>
+    <value>Ingen &lt;b&gt;list&lt;/b&gt;  er valgt.</value>
   </data>
   <data name="MissingSite" xml:space="preserve">
-    <value>尚未选择“站点”</value>
+    <value>Inten &lt;b&gt;side&lt;/b&gt;  er valgt.</value>
   </data>
   <data name="MissingView" xml:space="preserve">
-    <value>尚未选择“视图”</value>
+    <value>Inten &lt;b&gt;visning&lt;/b&gt; er valgt.</value>
   </data>
   <data name="MissingXAxis" xml:space="preserve">
-    <value>尚未选择“X轴栏”</value>
+    <value>Ingen &lt;b&gt;kolonne X-akse&lt;/b&gt; er valgt.</value>
   </data>
   <data name="MissingYAxis" xml:space="preserve">
-    <value>尚未选择“Y轴栏”</value>
+    <value>Ingen &lt;b&gt;kolonne Y-akse&lt;/b&gt; er valgt.</value>
   </data>
   <data name="MultipleCharts" xml:space="preserve">
-    <value>多图表</value>
+    <value>Multiple diagrammer</value>
   </data>
   <data name="MultipleChartsDesc" xml:space="preserve">
-    <value>每个序列以单独图表显示</value>
+    <value>Vis hver diagram separat </value>
   </data>
   <data name="OpenToolPane" xml:space="preserve">
-    <value>点此开启工具窗格…</value>
+    <value>Klik for at åbene værktøjs vindu</value>
   </data>
   <data name="Palette" xml:space="preserve">
-    <value>调色板</value>
+    <value>Palet</value>
   </data>
   <data name="PaletteDesc" xml:space="preserve">
-    <value>选择图表采用的调色板</value>
+    <value>Vælg den farve palet som diagrammet skal basers på</value>
   </data>
   <data name="Perspective" xml:space="preserve">
-    <value>视角</value>
+    <value>Perspektiv</value>
   </data>
   <data name="Rotation" xml:space="preserve">
-    <value>旋转</value>
+    <value>Rotation</value>
   </data>
   <data name="ShowLegend" xml:space="preserve">
-    <value>显示图例</value>
+    <value>Vis legende</value>
   </data>
   <data name="ShowLegendDesc" xml:space="preserve">
-    <value>显示图表的图例</value>
+    <value>Vis legende af diagrammet</value>
   </data>
   <data name="ShowValueLabel" xml:space="preserve">
-    <value>将值显示为标签</value>
+    <value>Vis værdi som etiket</value>
   </data>
   <data name="Site" xml:space="preserve">
-    <value>站点</value>
+    <value>Side</value>
   </data>
   <data name="Style" xml:space="preserve">
-    <value>样式</value>
+    <value>Still</value>
   </data>
   <data name="ThreeDCharts" xml:space="preserve">
-    <value>立体</value>
+    <value>3D diagrammer</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>标题</value>
+    <value>Titel</value>
   </data>
   <data name="TitleFontSz" xml:space="preserve">
-    <value>标题字体大小</value>
+    <value>Titel tekst størrelse</value>
   </data>
   <data name="ToolBuilderToolTip" xml:space="preserve">
-    <value>点此使用建构器</value>
+    <value>Klik for at bruge</value>
   </data>
   <data name="TreatAsZero" xml:space="preserve">
-    <value>视为零</value>
+    <value>Behandl som nul</value>
   </data>
   <data name="TreatAsZeroDesc" xml:space="preserve">
-    <value>空值视为零，否则将不包含该行</value>
+    <value>Behandl null værdier som nul, ellers undlad disse rækker</value>
   </data>
   <data name="UseLogarithmic" xml:space="preserve">
-    <value>使用对数缩放</value>
+    <value>Brug logaritmiske skalering</value>
   </data>
   <data name="View" xml:space="preserve">
-    <value>视图</value>
+    <value>Visning</value>
   </data>
   <data name="Width" xml:space="preserve">
-    <value>宽度</value>
+    <value>Bredde</value>
   </data>
   <data name="WidthDesc" xml:space="preserve">
-    <value>图表宽度</value>
+    <value>Bredde af diagrammet i pixels</value>
   </data>
   <data name="XSeries" xml:space="preserve">
-    <value>X系列值所在栏</value>
+    <value>X-serie kolonne(r)</value>
   </data>
   <data name="YAxisMissing" xml:space="preserve">
-    <value>连接列表中没能找到Y轴内容</value>
+    <value>Y-aksen er ikke fundet i den tilsluttede liste</value>
   </data>
   <data name="YSeries" xml:space="preserve">
-    <value>Y系列值所在栏</value>
+    <value>Y-serie kolonne</value>
   </data>
 </root>
