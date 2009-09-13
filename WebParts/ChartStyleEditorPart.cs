@@ -17,8 +17,9 @@ using System.Globalization;
 
 using System.Web.UI.DataVisualization.Charting;
 using System.Web.UI.WebControls.WebParts;
+using System.Threading;
 namespace ChartPart {
-    public class ChartStyleEditorPart: BaseEditorPart {
+    public class ChartStyleEditorPart : BaseEditorPart {
         DropDownList m_styles;
         CheckBox m_border;
         TextBox m_width;
@@ -33,10 +34,8 @@ namespace ChartPart {
         TextBox m_titleFontSize;
 
 
-        bool m_lockDown;
-        
-        
-        public ChartStyleEditorPart(): base(false) {
+        public ChartStyleEditorPart()
+            : base(false) {
             this.Title = Localization.Translate("Style");
         }
         /// <summary>
@@ -44,16 +43,16 @@ namespace ChartPart {
         /// </summary>
         protected ChartStyleEditorPart(string id)
             : base(id) {
-            
+
         }
         /// <summary>
         /// Initializes a new instance of the ChartStyleEditorPart class.
         /// </summary>
         protected ChartStyleEditorPart(bool sharedModeOnly)
             : base(sharedModeOnly) {
-            
+
         }
-         
+
         public override string EditorName {
             get { return "_ChartStyleEditorPart"; }
         }
@@ -98,27 +97,34 @@ namespace ChartPart {
             m_titleFontSize.ID = "titleFontSize";
             RangeValidator rv2 = new RangeValidator { ControlToValidate = m_titleFontSize.ID, Type = ValidationDataType.Integer, MinimumValue = "1", MaximumValue = "100", ErrorMessage = "Invalid value" };
 
-            
-            
+            ChartPartWebPart chartPart = (ChartPartWebPart)this.WebPartToEdit;
+            LockDownModes ldm = LockDownModes.None;
+            if (chartPart != null) {
+                ldm = chartPart.LockDownMode;
+            }
+
             AddToolPaneRow(CreateToolPaneRow(Localization.Translate("Style"), new Control[] { m_styles }));
-            if (!m_lockDown) {
+            if ((ldm & LockDownModes.Full) == LockDownModes.None) {
                 AddToolPaneRow(CreateToolPaneSeparator());
                 AddToolPaneRow(CreateToolPaneRow(Localization.Translate("TitleFontSz"), new Control[] { m_titleFontSize, new LiteralControl("pt "), rv2 }));
                 AddToolPaneRow(CreateToolPaneSeparator());
+            }
+            if ((ldm & LockDownModes.Colors) == LockDownModes.None) {
                 AddToolPaneRow(CreateToolPaneRow(Localization.Translate("Palette"), Localization.Translate("PaletteDesc"), new Control[] { m_palette }));
                 AddToolPaneRow(CreateToolPaneRow(CreateCheckBoxControls(m_useCustomPalette, Localization.Translate("CustomPalette"), Localization.Translate("CustomPaletteDesc"))));
                 AddToolPaneRow(CreateToolPaneRow(Localization.Translate("CustomPaletteValues"), Localization.Translate("CustomPaletteValuesDesc"), new Control[] { m_customColors }));
-                
             }
             AddToolPaneRow(CreateToolPaneSeparator());
             AddToolPaneRow(CreateToolPaneRow(Localization.Translate("Height"), Localization.Translate("HeightDesc"), new Control[] { m_height }));
             AddToolPaneRow(CreateToolPaneRow(Localization.Translate("Width"), Localization.Translate("WidthDesc"), new Control[] { m_width }));
-            if (!m_lockDown) {
+            if ((ldm & LockDownModes.Full) == LockDownModes.None) {
                 AddToolPaneRow(CreateToolPaneSeparator());
                 AddToolPaneRow(CreateToolPaneRow(CreateCheckBoxControls(m_border, Localization.Translate("ChartBorder"), Localization.Translate("ChartBorderDesc"))));
                 AddToolPaneRow(CreateToolPaneRow(Localization.Translate("BorderStyle"), new Control[] { m_borderstyle }));
                 AddToolPaneRow(CreateToolPaneRow(Localization.Translate("BorderLine"), new Control[] { m_borderlinestyle }));
                 AddToolPaneRow(CreateToolPaneRow(Localization.Translate("BorderWidth"), new Control[] { m_borderwidth }));
+            }
+            if ((ldm & LockDownModes.Colors) == LockDownModes.None) {
                 AddToolPaneRow(CreateToolPaneRow(Localization.Translate("BorderColor"), new Control[] { m_bordecolor }));
             }
 
@@ -137,40 +143,40 @@ namespace ChartPart {
         }
 
         public override void SyncChanges() {
-          EnsureChildControls();
+            EnsureChildControls();
             ChartPartWebPart chartPart = (ChartPartWebPart)this.WebPartToEdit;
             if (chartPart != null) {
-                m_width.Text = chartPart.ChartWidth.ToString(CultureInfo.CurrentCulture);
-                m_height.Text = chartPart.ChartHeight.ToString(CultureInfo.CurrentCulture);
+                m_width.Text = chartPart.ChartWidth.ToString(Thread.CurrentThread.CurrentUICulture);
+                m_height.Text = chartPart.ChartHeight.ToString(Thread.CurrentThread.CurrentUICulture);
                 m_border.Checked = chartPart.ChartBorder;
                 m_styles.SelectedValue = chartPart.DrawingStyle.ToString();
                 m_borderstyle.SelectedValue = chartPart.ChartBorderStyle.ToString();
                 m_bordecolor.Text = chartPart.ChartBorderColor;
                 m_borderlinestyle.SelectedValue = chartPart.ChartBorderLineStyle.ToString();
                 m_borderlinestyle.Enabled = m_border.Checked;
-                m_borderwidth.Text = chartPart.ChartBorderWidth.ToString();
+                m_borderwidth.Text = chartPart.ChartBorderWidth.ToString(Thread.CurrentThread.CurrentUICulture);
                 m_palette.SelectedValue = chartPart.Palette.ToString();
                 m_useCustomPalette.Checked = chartPart.CustomPalette;
                 m_customColors.Text = chartPart.CustomPaletteValues;
-                m_titleFontSize.Text = chartPart.TitleFontSize.ToString();
+                m_titleFontSize.Text = chartPart.TitleFontSize.ToString(Thread.CurrentThread.CurrentUICulture);
             }
         }
         public override bool ApplyChanges() {
             EnsureChildControls();
             ChartPartWebPart chartPart = (ChartPartWebPart)this.WebPartToEdit;
             if (chartPart != null) {
-                chartPart.ChartWidth = Convert.ToInt32(m_width.Text);
-                chartPart.ChartHeight = Convert.ToInt32(m_height.Text);
+                chartPart.ChartWidth = Convert.ToInt32(m_width.Text,Thread.CurrentThread.CurrentUICulture);
+                chartPart.ChartHeight = Convert.ToInt32(m_height.Text, Thread.CurrentThread.CurrentUICulture);
                 chartPart.ChartBorder = m_border.Checked;
                 chartPart.ChartBorderColor = m_bordecolor.Text;
-                chartPart.ChartBorderWidth = Convert.ToInt32(m_borderwidth.Text);
+                chartPart.ChartBorderWidth = m_borderwidth.Text.Length == 0 ? 0 : Convert.ToInt32(m_borderwidth.Text, Thread.CurrentThread.CurrentUICulture);
                 chartPart.ChartBorderLineStyle = (ChartDashStyle)Enum.Parse(typeof(ChartDashStyle), m_borderlinestyle.SelectedValue);
                 chartPart.ChartBorderStyle = (BorderSkinStyle)Enum.Parse(typeof(BorderSkinStyle), m_borderstyle.SelectedValue);
                 chartPart.DrawingStyle = (DrawingStyle)Enum.Parse(typeof(DrawingStyle), m_styles.SelectedValue);
                 chartPart.Palette = (ChartColorPalette)Enum.Parse(typeof(ChartColorPalette), m_palette.SelectedValue);
                 chartPart.CustomPalette = m_useCustomPalette.Checked;
                 chartPart.CustomPaletteValues = m_customColors.Text;
-                chartPart.TitleFontSize = Convert.ToInt32(m_titleFontSize.Text);
+                chartPart.TitleFontSize = m_titleFontSize.Text.Length == 0 ? 0 :Convert.ToInt32(m_titleFontSize.Text, Thread.CurrentThread.CurrentUICulture);
             }
             return true;
         }

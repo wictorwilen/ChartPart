@@ -27,6 +27,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Data;
 using System.Drawing;
+using System.IO;
+using System.Threading;
 
 namespace ChartPart {
     [DefaultProperty("Text")]
@@ -118,6 +120,11 @@ namespace ChartPart {
                 writer.WriteEncodedText("Could not generate the chart, please reload the page");
             }
 #endif
+            catch (FileNotFoundException)
+            {
+                RenderError(writer, CreateErrorControl(Localization.Translate("MissingSite"), true));
+                return;
+            }
             catch (Exception ex) {
                 writer.WriteEncodedText(Localization.Translate("ExceptionOccurred") + ex.ToString());
             }
@@ -153,6 +160,7 @@ namespace ChartPart {
                 series.Points.Add(data[key]);
             }
         }
+        [SharePointPermission(SecurityAction.Demand, ObjectModel = true)]
         protected void GenerateChart() {
             if (!string.IsNullOrEmpty(this.ChartTitle)) {
                 m_chart.Titles.Add(new Title(this.ChartTitle, 
@@ -179,7 +187,7 @@ namespace ChartPart {
                     SPView view = list.Views[this.ViewId];
 
                     for (int x = 0; x < XAxisSourceColumns.Count; x++) {
-                        Series series = new Series(String.Format("series_{0}", x));
+                        Series series = new Series(String.Format(Thread.CurrentThread.CurrentUICulture,"series_{0}", x));
 
                         if (createMultipleCharts()) {
                             chartArea = CreateChartArea(x.ToString());
@@ -199,7 +207,7 @@ namespace ChartPart {
                         
                         series["DrawingStyle"] = this.DrawingStyle.ToString();
                         if (this.LinkToSourceList) {
-                            series.Url = String.Format("{0}/{1}", web.Url, view.Url);
+                            series.Url = String.Format(Thread.CurrentThread.CurrentUICulture,"{0}/{1}", web.Url, view.Url);
                         }
                         if (this.XAxisSourceColumns[x] == "**count**") {
                             series.ToolTip = Localization.Translate("Count");
@@ -340,15 +348,15 @@ namespace ChartPart {
                                             // todo: detailed tooltip instead...
                                         case ChartValueType.DateTime:
                                         case ChartValueType.Date:
-                                            point.ToolTip = string.Format("{0}: {1}: {2}", series.ToolTip, DateTime.FromOADate(point.XValue).ToShortDateString(), point.YValues[0]);
+                                            point.ToolTip = String.Format(Thread.CurrentThread.CurrentUICulture,"{0}: {1}: {2}", series.ToolTip, DateTime.FromOADate(point.XValue).ToShortDateString(), point.YValues[0]);
                                             break;
                                         default:
-                                            point.ToolTip = string.Format("{0}: {1}", series.ToolTip,  point.YValues[0]);
+                                            point.ToolTip = String.Format(Thread.CurrentThread.CurrentUICulture,"{0}: {1}", series.ToolTip,  point.YValues[0]);
                                             break;
                                     }                                    
                                 }
                                 else {
-                                    point.ToolTip = string.Format("{0}: {1}", series.ToolTip, point.YValues[0]);
+                                    point.ToolTip = String.Format(Thread.CurrentThread.CurrentUICulture,"{0}: {1}", series.ToolTip, point.YValues[0]);
                                 }
                             }
                             else {
@@ -356,15 +364,15 @@ namespace ChartPart {
                                     switch (series.XValueType) {
                                         case ChartValueType.DateTime:
                                         case ChartValueType.Date:
-                                            point.ToolTip = string.Format("{0}: {1}", DateTime.FromOADate(point.XValue).ToShortDateString(), point.YValues[0]);
+                                            point.ToolTip = String.Format(Thread.CurrentThread.CurrentUICulture,"{0}: {1}", DateTime.FromOADate(point.XValue).ToShortDateString(), point.YValues[0]);
                                             break;
                                         default:
-                                            point.ToolTip = string.Format("{0}", point.YValues[0]);
+                                            point.ToolTip = String.Format(Thread.CurrentThread.CurrentUICulture,"{0}", point.YValues[0]);
                                             break;
                                     }
                                 }
                                 else {
-                                    point.ToolTip = string.Format("{0}", point.YValues[0]);
+                                    point.ToolTip = String.Format(Thread.CurrentThread.CurrentUICulture,"{0}", point.YValues[0]);
                                 }
                             }
                             

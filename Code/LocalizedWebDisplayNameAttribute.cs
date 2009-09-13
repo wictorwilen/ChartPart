@@ -19,7 +19,7 @@ namespace ChartPart {
     /// Locallized version of the WebDisplayNameAttribute
     /// </summary>
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
-    public class LocalizedWebDisplayNameAttribute: WebDisplayNameAttribute {
+    public sealed class LocalizedWebDisplayNameAttribute: WebDisplayNameAttribute {
         bool m_isLocalized = false;
 
         /// <summary>

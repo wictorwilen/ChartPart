@@ -17,6 +17,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Threading;
 using Microsoft.SharePoint.Utilities;
+using Microsoft.SharePoint.Security;
+using System.Security.Permissions;
+using System.Globalization;
 
 
 namespace ChartPart {
@@ -97,6 +100,7 @@ namespace ChartPart {
             }
             this.EditorTable.Rows.Add(row);
         }
+        [SharePointPermission(SecurityAction.Demand, ObjectModel = true)]
         protected void AddToolPaneRowWithBuilder(TableRow row, TextBox textBox) {
             if (this.EditorTable == null) {
                 CreateToolPaneTable();
@@ -114,15 +118,15 @@ namespace ChartPart {
             button.ToolTip = Localization.Translate("ToolBuilderToolTip");
             button.TabIndex = 0;
             button.Text = "...";
-            button.OnClientClick = string.Format("javascript:MSOPGrid_doBuilder('{0}?culture={1}', {2}, 'dialogHeight:340px;dialogWidth:430px;help:no;status:no;resizable:yes');",
-                SPHttpUtility.EcmaScriptStringLiteralEncode("/lt/_layouts/zoombldr.aspx"),
+            button.OnClientClick = string.Format(CultureInfo.InvariantCulture, "javascript:MSOPGrid_doBuilder('{0}?culture={1}', {2}, 'dialogHeight:340px;dialogWidth:430px;help:no;status:no;resizable:yes');",
+                SPHttpUtility.EcmaScriptStringLiteralEncode("/_layouts/zoombldr.aspx"),
                 Thread.CurrentThread.CurrentUICulture,
                 SPHttpUtility.EcmaScriptStringLiteralEncode(textBox.ClientID));
             button.Style.Add("display", "none");
             button.Attributes.Add("onfocusout", "this.style.display='none';");
 
-            textBox.Attributes.Add("onfocusin", string.Format("MSOPGrid_BuilderVisible({0});", button.ClientID));
-            textBox.Attributes.Add("ondeactivate", string.Format("MSOTlPn_prevBuilder={0};", button.ClientID));
+            textBox.Attributes.Add("onfocusin", string.Format(CultureInfo.InvariantCulture,"MSOPGrid_BuilderVisible({0});", button.ClientID));
+            textBox.Attributes.Add("ondeactivate", string.Format(CultureInfo.InvariantCulture, "MSOTlPn_prevBuilder={0};", button.ClientID));
             textBox.Attributes.Add("ms-TlPnWiden", "true");
 
 
@@ -140,7 +144,7 @@ namespace ChartPart {
         protected static TextBox CreateEditorPartTextBox(int width) {
             TextBox textBox = new TextBox();
             textBox.CssClass = "UserInput";
-            textBox.Width = new Unit(string.Format("{0}px", width));
+            textBox.Width = new Unit(string.Format(CultureInfo.InvariantCulture, "{0}px", width),CultureInfo.InvariantCulture);
             return textBox;
         }
         protected static TextBox CreateEditorPartTextBox() {
@@ -188,7 +192,7 @@ namespace ChartPart {
         protected static TableRow CreateToolPaneRow(string title, string description, Control[] controls) {
             TableRow row = new TableRow();
             TableCell cell = new TableCell();
-            cell.Controls.Add(new LiteralControl(String.Format("<div class='UserSectionHead'>{0}</div>", title)));
+            cell.Controls.Add(new LiteralControl(String.Format(CultureInfo.InvariantCulture, "<div class='UserSectionHead'>{0}</div>", title)));
             cell.Controls.Add(new LiteralControl("<div class='UserSectionBody'><div class='UserControlGroup'><nobr>"));
             foreach (Control control in controls) {
                 cell.Controls.Add(control);
@@ -218,7 +222,7 @@ namespace ChartPart {
             TableCell cell = new TableCell();
             row.Cells.Add(cell);
 
-            cell.Controls.Add(new LiteralControl(String.Format("<div class='UserSectionHead'>{0}</div>", title)));
+            cell.Controls.Add(new LiteralControl(String.Format(CultureInfo.InvariantCulture, "<div class='UserSectionHead'>{0}</div>", title)));
             cell.Controls.Add(new LiteralControl("<div class='UserSectionBody'><div class='UserControlGroup'><nobr>"));
             cell.Controls.Add(textBox);
 

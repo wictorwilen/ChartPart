@@ -15,6 +15,8 @@ using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Web.UI.DataVisualization.Charting;
 using System.Web.UI.WebControls.WebParts;
+using System.Threading;
+using System.Globalization;
 
 namespace ChartPart {
     public class Chart3DEditorPart : BaseEditorPart {
@@ -84,7 +86,7 @@ namespace ChartPart {
             m_perspectiveValidator.MaximumValue = "100";
             m_perspectiveValidator.Type = ValidationDataType.Integer;
             m_perspective.ID = "perspective";   
-            m_perspectiveValidator.Text = String.Format(" {0}", Localization.Translate("InvalidValue"));
+            m_perspectiveValidator.Text = String.Format(CultureInfo.InvariantCulture," {0}", Localization.Translate("InvalidValue"));
             m_perspectiveValidator.ControlToValidate = m_perspective.ID;
 
             m_rotation = CreateEditorPartTextBox(90);
@@ -94,7 +96,7 @@ namespace ChartPart {
             m_rotationValidator.MaximumValue = "360";
             m_rotationValidator.Type = ValidationDataType.Integer;
             m_rotation.ID = "rotation";
-            m_rotationValidator.Text = String.Format(" {0}", Localization.Translate("InvalidValue"));
+            m_rotationValidator.Text = String.Format(CultureInfo.InvariantCulture," {0}", Localization.Translate("InvalidValue"));
             m_rotationValidator.ControlToValidate = m_rotation.ID;
 
             m_inclination = CreateEditorPartTextBox(90);
@@ -104,7 +106,7 @@ namespace ChartPart {
             m_inclinationValidator.MaximumValue = "90";
             m_inclinationValidator.Type = ValidationDataType.Integer;
             m_inclination.ID = "inclination";
-            m_inclinationValidator.Text = String.Format(" {0}", Localization.Translate("InvalidValue"));
+            m_inclinationValidator.Text = String.Format(CultureInfo.InvariantCulture," {0}", Localization.Translate("InvalidValue"));
             m_inclinationValidator.ControlToValidate = m_inclination.ID;
 
             
@@ -135,9 +137,9 @@ namespace ChartPart {
                 m_lightstyle.Enabled = m_3Denabled.Checked;
                 m_isometric.Enabled = m_3Denabled.Checked;
                 m_isometric.Checked = chartPart.ThreeDIsometric;
-                m_perspective.Text = chartPart.ThreeDPerspective.ToString();
-                m_rotation.Text = chartPart.ThreeDRotation.ToString();
-                m_inclination.Text = chartPart.ThreeDInclination.ToString();
+                m_perspective.Text = chartPart.ThreeDPerspective.ToString(Thread.CurrentThread.CurrentUICulture);
+                m_rotation.Text = chartPart.ThreeDRotation.ToString(Thread.CurrentThread.CurrentUICulture);
+                m_inclination.Text = chartPart.ThreeDInclination.ToString(Thread.CurrentThread.CurrentUICulture);
                 
             }
         }
@@ -148,9 +150,9 @@ namespace ChartPart {
                 chartPart.Enable3DMode = m_3Denabled.Checked;
                 chartPart.ThreeDLightStyle = (LightStyle)Enum.Parse(typeof(LightStyle), m_lightstyle.SelectedValue);
                 chartPart.ThreeDIsometric = m_isometric.Checked;
-                chartPart.ThreeDPerspective = int.Parse(m_perspective.Text);
-                chartPart.ThreeDRotation = int.Parse(m_rotation.Text);
-                chartPart.ThreeDInclination = int.Parse(m_inclination.Text);
+                chartPart.ThreeDPerspective = int.Parse(m_perspective.Text, Thread.CurrentThread.CurrentUICulture);
+                chartPart.ThreeDRotation = int.Parse(m_rotation.Text, Thread.CurrentThread.CurrentUICulture);
+                chartPart.ThreeDInclination = int.Parse(m_inclination.Text, Thread.CurrentThread.CurrentUICulture);
             }
 
             return true;

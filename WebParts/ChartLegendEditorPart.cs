@@ -17,6 +17,7 @@ using System.Globalization;
 
 using System.Web.UI.DataVisualization.Charting;
 using System.Web.UI.WebControls.WebParts;
+using System.Threading;
 namespace ChartPart {
     public class ChartLegendEditorPart : BaseEditorPart {
         CheckBox m_legend;
@@ -39,7 +40,7 @@ namespace ChartPart {
             if (webPart != null) {
                 ChartPartWebPart wp = webPart as ChartPartWebPart;
                 if (wp != null) {
-                    if ((wp.LockDownMode & LockDownModes.ThreeD) == LockDownModes.ThreeD) {
+                    if ((wp.LockDownMode & LockDownModes.Full) == LockDownModes.Full) {
                         return false;
                     }
                 }
@@ -70,7 +71,7 @@ namespace ChartPart {
             rv1.Type = ValidationDataType.Integer;
             rv1.MinimumValue = "1";
             rv1.MaximumValue = "100";
-            rv1.ErrorMessage = String.Format(" {0}", Localization.Translate("InvalidValue"));
+            rv1.ErrorMessage = String.Format(CultureInfo.InvariantCulture," {0}", Localization.Translate("InvalidValue"));
 
             m_legendFontSize= CreateEditorPartTextBox(70);
             m_legendFontSize.ID = "legendFontSize";
@@ -79,7 +80,7 @@ namespace ChartPart {
             rv2.Type = ValidationDataType.Integer;
             rv2.MinimumValue = "1";
             rv2.MaximumValue = "100";
-            rv2.ErrorMessage = String.Format(" {0}", Localization.Translate("InvalidValue"));
+            rv2.ErrorMessage = String.Format(CultureInfo.InvariantCulture," {0}", Localization.Translate("InvalidValue"));
 
             AddToolPaneRow(CreateToolPaneRow(CreateCheckBoxControls(m_showValue, Localization.Translate("ShowValueLabel"))));
             AddToolPaneRow(CreateToolPaneSeparator());
@@ -108,8 +109,8 @@ namespace ChartPart {
                 m_legendPos.SelectedValue = chartPart.LegendPosition.ToString();
                 m_legendStyle.SelectedValue = chartPart.LegendStyle.ToString();
                 m_title.Text = chartPart.LegendTitle;
-                m_legendFontSize.Text = chartPart.LegendFontSize.ToString();
-                m_titleFontSize.Text = chartPart.LegendTitleFontSize.ToString();
+                m_legendFontSize.Text = chartPart.LegendFontSize.ToString(Thread.CurrentThread.CurrentUICulture);
+                m_titleFontSize.Text = chartPart.LegendTitleFontSize.ToString(Thread.CurrentThread.CurrentUICulture);
                 m_showValue.Checked = chartPart.ShowValueAsLabel;
             }
         }
@@ -121,8 +122,8 @@ namespace ChartPart {
                 chartPart.LegendPosition = (Docking)Enum.Parse(typeof(Docking), m_legendPos.SelectedValue);
                 chartPart.LegendStyle = (LegendStyle)Enum.Parse(typeof(LegendStyle), m_legendStyle.SelectedValue);
                 chartPart.LegendTitle = m_title.Text;
-                chartPart.LegendTitleFontSize = int.Parse(m_titleFontSize.Text);
-                chartPart.LegendFontSize = int.Parse(m_legendFontSize.Text);
+                chartPart.LegendTitleFontSize = int.Parse(m_titleFontSize.Text, Thread.CurrentThread.CurrentUICulture);
+                chartPart.LegendFontSize = int.Parse(m_legendFontSize.Text, Thread.CurrentThread.CurrentUICulture);
                 chartPart.ShowValueAsLabel = m_showValue.Checked;
             }
             return true;

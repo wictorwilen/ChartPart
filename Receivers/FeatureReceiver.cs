@@ -15,8 +15,11 @@ using System;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Administration;
 using System.Globalization;
+using Microsoft.SharePoint.Security;
+using System.Security.Permissions;
 
 namespace ChartPart {
+    [SharePointPermission(SecurityAction.Demand, ObjectModel = true)]
     public class FeatureReceiver : SPFeatureReceiver {
 
         public override void FeatureInstalled(SPFeatureReceiverProperties properties) {
@@ -25,7 +28,7 @@ namespace ChartPart {
         public override void FeatureUninstalling(SPFeatureReceiverProperties properties) {
             
         }
-
+        [SharePointPermission(SecurityAction.Demand, ObjectModel = true)]
         public override void FeatureActivated(SPFeatureReceiverProperties properties) {
             SPSite site = properties.Feature.Parent as SPSite;
             SPWebApplication webApplication = site.WebApplication;
@@ -35,7 +38,7 @@ namespace ChartPart {
             webApplication.Update();
             
         }
-
+        [SharePointPermission(SecurityAction.Demand, ObjectModel = true)]
         public override void FeatureDeactivating(SPFeatureReceiverProperties properties) {
             SPSite site = properties.Feature.Parent as SPSite;
             SPWebApplication webApplication = site.WebApplication;
@@ -46,6 +49,7 @@ namespace ChartPart {
         }
 
         // idea from Tony Bierman 
+
         private static void AddorRemoveChartHandlerToWebConfig(SPWebApplication webApplication, bool removeModification) {
             
             string asmDetails = string.Format(CultureInfo.InvariantCulture,

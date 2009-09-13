@@ -22,6 +22,9 @@ using System.Web.UI.WebControls.WebParts;
 using Microsoft.SharePoint;
 using System.Collections.Specialized;
 using System.Web.UI.DataVisualization.Charting;
+using System.IO;
+using Microsoft.SharePoint.Security;
+using System.Security.Permissions;
 
 
 namespace ChartPart {
@@ -121,13 +124,26 @@ namespace ChartPart {
             m_xcols.Items.Clear();
             m_xcols2.Items.Clear();
             m_ycols.Items.Clear();
-
-            if (!string.IsNullOrEmpty(m_siteUrl.Text)) {
-                using (SPSite site = new SPSite(m_siteUrl.Text)) {
-                    using (SPWeb web = site.OpenWeb()) {
-                        fillLists(web);
+            try
+            {
+                if (!string.IsNullOrEmpty(m_siteUrl.Text))
+                {
+                    using (SPSite site = new SPSite(m_siteUrl.Text))
+                    {
+                        using (SPWeb web = site.OpenWeb())
+                        {
+                            fillLists(web);
+                        }
                     }
                 }
+            }
+            catch (FileNotFoundException)
+            {
+
+            }
+            catch (UriFormatException)
+            {
+                
             }
         }
 
@@ -213,6 +229,7 @@ namespace ChartPart {
             return true;
         }
 
+        [SharePointPermission(SecurityAction.Demand, ObjectModel = true)]
         public override void SyncChanges() {
             EnsureChildControls();
             // sync with the new property changes here
@@ -225,47 +242,70 @@ namespace ChartPart {
                 m_title.Text = chartPart.ChartTitle;
                 m_siteUrl.Text = chartPart.SiteUrl;
                 m_chartType.SelectedValue = chartPart.ChartType.ToString();
-                
-                using (SPSite site = new SPSite(chartPart.SiteUrl)) {
-                    using (SPWeb web = site.OpenWeb()) {
-                        fillLists(web);
-                        m_list.SelectedValue = chartPart.ListId.ToString();
-                        if (chartPart.ListId != Guid.Empty) {
-                            SPList sellist = web.Lists[chartPart.ListId];
 
-                            if (sellist != null) {
-                                fillViews(sellist);
-                                m_view.SelectedValue = chartPart.ViewId.ToString();
-                                if (chartPart.ViewId != Guid.Empty) {
-                                    try {
-                                        SPView selview = sellist.Views[chartPart.ViewId];
-                                        if (selview != null) {
+                try
+                {
+                    using (SPSite site = new SPSite(chartPart.SiteUrl))
+                    {
+                        using (SPWeb web = site.OpenWeb())
+                        {
+                            fillLists(web);
+                            m_list.SelectedValue = chartPart.ListId.ToString();
+                            if (chartPart.ListId != Guid.Empty)
+                            {
+                                SPList sellist = web.Lists[chartPart.ListId];
+
+                                if (sellist != null)
+                                {
+                                    fillViews(sellist);
+                                    m_view.SelectedValue = chartPart.ViewId.ToString();
+                                    if (chartPart.ViewId != Guid.Empty)
+                                    {
+                                        try
+                                        {
+                                            SPView selview = sellist.Views[chartPart.ViewId];
+                                            if (selview != null)
+                                            {
 
 
-                                            fillColumns(sellist, selview);
-                                            if (chartPart.XAxisSourceColumns != null) {
-                                                foreach (string s in chartPart.XAxisSourceColumns) {
-                                                    m_xcols.Items.FindByValue(s).Selected = true;
+                                                fillColumns(sellist, selview);
+                                                if (chartPart.XAxisSourceColumns != null)
+                                                {
+                                                    foreach (string s in chartPart.XAxisSourceColumns)
+                                                    {
+                                                        m_xcols.Items.FindByValue(s).Selected = true;
+                                                    }
                                                 }
-                                            }
-                                            if (chartPart.X2AxisSourceColumns != null) {
-                                                foreach (string s in chartPart.X2AxisSourceColumns) {
-                                                    m_xcols2.Items.FindByValue(s).Selected = true;
+                                                if (chartPart.X2AxisSourceColumns != null)
+                                                {
+                                                    foreach (string s in chartPart.X2AxisSourceColumns)
+                                                    {
+                                                        m_xcols2.Items.FindByValue(s).Selected = true;
+                                                    }
                                                 }
-                                            }
-                                            if (chartPart.YAxisSourceColumns != null) {
-                                                foreach (string s in chartPart.YAxisSourceColumns) {
-                                                    m_ycols.Items.FindByValue(s).Selected = true;
+                                                if (chartPart.YAxisSourceColumns != null)
+                                                {
+                                                    foreach (string s in chartPart.YAxisSourceColumns)
+                                                    {
+                                                        m_ycols.Items.FindByValue(s).Selected = true;
+                                                    }
                                                 }
                                             }
                                         }
-                                    }
-                                    catch (ArgumentException) {
+                                        catch (ArgumentException)
+                                        {
+                                        }
                                     }
                                 }
                             }
                         }
                     }
+                }
+                catch (FileNotFoundException)
+                {
+                    // could not locate the site
+                    // TODO:
+                    
                 }
 
 
@@ -310,7 +350,7 @@ namespace ChartPart {
             m_xcols2.Items.Add(new ListItem(Localization.Translate("ItemCount"), "**count**"));
         }
 
-        private bool isNumericField(SPField field) {
+        private static bool isNumericField(SPField field) {
             if (field.FieldValueType == typeof(System.Double)) {
                 return true;
             }

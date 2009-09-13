@@ -15,6 +15,7 @@
 using System.Reflection;
 using System.Security;
 using System;
+using System.Runtime.InteropServices;
 
 [assembly: AssemblyVersion("2.0.1.0")]
 
@@ -24,3 +25,4 @@ using System;
 [assembly: AssemblyCompanyAttribute("Wictor Wilén")]
 [assembly: AssemblyProductAttribute("ChartPart")]
 [assembly: AssemblyCopyrightAttribute("(C) Copyright Wictor Wilén 2008-2009")]
+[assembly: ComVisible(false)]

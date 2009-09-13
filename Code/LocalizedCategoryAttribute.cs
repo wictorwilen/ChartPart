@@ -18,7 +18,7 @@ namespace ChartPart {
     /// Locallized version of the CategoryAttribute
     /// </summary>
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
-    public class LocalizedCategoryAttribute: CategoryAttribute {
+    public sealed class LocalizedCategoryAttribute: CategoryAttribute {
         /// <summary>
         /// Initializes a new instance of the LocalizedCategoryAttribute class.
         /// </summary>

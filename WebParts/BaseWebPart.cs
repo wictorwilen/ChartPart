@@ -1,4 +1,4 @@
-﻿/*
+﻿    /*
  * 
  * ChartPart for SharePoint
  * ------------------------------------------
@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Web.UI.WebControls.WebParts;
+using System.Globalization;
 
 namespace ChartPart {
     /// <summary>
@@ -51,9 +52,9 @@ namespace ChartPart {
             Label label = new Label();
             LiteralControl content = new LiteralControl(message);
             label.Controls.Add(content);
-            HyperLink hl = new HyperLink { 
-                NavigateUrl = string.Format("javascript:MSOTlPn_ShowToolPane2Wrapper('Edit','129','{0}');", this.ID), 
-                ID = string.Format("MsoFrameworkToolpartDefmsg_{0}", this.ID), 
+            HyperLink hl = new HyperLink {
+                NavigateUrl = string.Format(CultureInfo.InvariantCulture, "javascript:MSOTlPn_ShowToolPane2Wrapper('Edit','129','{0}');", this.ID),
+                ID = string.Format(CultureInfo.InvariantCulture, "MsoFrameworkToolpartDefmsg_{0}", this.ID), 
                 Text = Localization.Translate("OpenToolPane") };
             label.Controls.Add(new LiteralControl("<br/>"));
             label.Controls.Add(hl);

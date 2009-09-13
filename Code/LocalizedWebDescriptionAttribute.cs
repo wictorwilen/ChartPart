@@ -19,7 +19,7 @@ namespace ChartPart {
     /// A Localized version of the WebDescriptionAttribute
     /// </summary>
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false,Inherited = true)]
-    public class LocalizedWebDescriptionAttribute : WebDescriptionAttribute {
+    public sealed class LocalizedWebDescriptionAttribute : WebDescriptionAttribute {
         bool m_isLocalized = false;
 
         /// <summary>
